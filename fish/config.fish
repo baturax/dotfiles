@@ -4,11 +4,15 @@ function fish_greeting
 end
 
 alias gpush="git add . && git commit -m 'bai' && git push"
-alias ch='chmod +x'
-alias sudo='sudo -E'
-alias ls='eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension'
-alias cat='bat'
-alias cr='cargo run'
-alias c='clear'
-alias gc='git clone'
-alias pi='sudo pacman -S --needed'
+alias ch="chmod +x"
+alias sudo="sudo -E"
+alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension"
+alias cat="bat"
+alias cr="cargo run"
+alias c="clear"
+alias gc="git clone"
+alias pi="sudo pacman -S --needed"
+alias pr="sudo pacman -Rns"
+alias prc="sudo pacman -Rnsc"
+alias free="free -h"
+alias du="dust"

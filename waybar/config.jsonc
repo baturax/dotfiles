@@ -2,9 +2,35 @@
 "layer": "top",
 "gtk-layer-shell": false,
 
-"modules-left": ["hyprland/workspaces", "hyprland/window"],
-"modules-center": ["custom/playing"],
+"modules-left": [ "hyprland/workspaces", "hyprland/window"],
+"modules-center": ["custom/spacebar", "custom/nautilus", "custom/spacebar2", "custom/terminal", "custom/spacebar2", "custom/browser", "custom/playing"],
 "modules-right": ["pulseaudio","battery","memory","cpu","clock","tray" ],
+
+"custom/browser": {
+   "format": " ",
+   "tooltip": false,
+   "on-click": "firefox"
+},
+
+"custom/terminal": {
+   "format": " ",
+   "tooltip": false,
+   "on-click": "kitty"
+},
+
+"custom/spacebar": {
+   "format": "        "
+},
+
+"custom/spacebar2": {
+   "format": "  "
+},
+
+"custom/nautilus": {
+   "format": "📂",
+   "tooltip": false,
+   "on-click": "nautilus"
+},
 
 "tray": {
     "icon-size": 21,
