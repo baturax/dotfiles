@@ -24,3 +24,5 @@ https://greasyfork.org/scripts/431691
 https://greasyfork.org/scripts/394820
 
 https://greasyfork.org/scripts/501718
+
+https://greasyfork.org/en/scripts/420776-nitter
