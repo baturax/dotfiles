@@ -17,7 +17,7 @@ input {
     mouse {
         
     }
-    focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="100%"
 }
 
 output "eDP-1" {
@@ -72,14 +72,14 @@ environment {
     DISPLAY ":0"
 }
 
-spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/31.jpg"
+spawn-at-startup "swaybg" "-i" "/home/bai/.config/extra/Wallpaper/31.jpg"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "waybar"
 spawn-at-startup "swaybg"
-spawn-at-startup "mako"
-spawn-at-startup "kitty"
-//prefer-no-csd
+spawn-at-startup "dunst"
+spawn-at-startup "foot"
+prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -93,16 +93,30 @@ animations {
 
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#".*"# title="^Disable.*"
+    match app-id=r#".*"# title=".*lugin.*"
+    match app-id=r#".*"# title=".*open.*"
+    match app-id=r#".*"# title=".*New.*"
+    match app-id=r#".*"# title="win.*"
+    match app-id=r#".*"# title=".*Clone.*"
     match app-id=r#"MainKt"#
     open-floating true
 }
-
+window-rule {
+   match app-id=r#".*"# title="touc.*"
+   draw-border-with-background false
+   opacity 1.0
+   border {
+        off
+    }
+}
 
 binds {
     
-    Mod+C { spawn "kitty"; }
+    Mod+C { spawn "foot"; }
     Mod+D { spawn "fuzzel"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+idotless { spawn "nwg-look" "&&" "qt5ct" "&&" "qt6ct"; }
+    Mod+E { spawn "thunar"; }
     Mod+W { spawn "firefox"; }
     Super+Alt+L { spawn "swaylock"; }
     Mod+Period { spawn "bemoji" "-t"; }

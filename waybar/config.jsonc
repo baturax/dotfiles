@@ -2,9 +2,14 @@
 "layer": "top",
 "gtk-layer-shell": false,
 
-"modules-left": [ "hyprland/workspaces", "hyprland/window"],
+"modules-left": [ "niri/workspaces", "niri/window"],
 "modules-center": ["custom/spacebar", "custom/nautilus", "custom/spacebar2", "custom/terminal", "custom/spacebar2", "custom/browser", "custom/playing"],
-"modules-right": ["pulseaudio","battery","memory","cpu","clock","tray" ],
+"modules-right": ["pulseaudio","battery","memory","cpu","clock","tray", "custom/turnoff" ],
+
+"custom/turnoff": {
+   "format": "󰐦 ",
+   "on-click": "m.k.a"
+},
 
 "custom/browser": {
    "format": " ",
