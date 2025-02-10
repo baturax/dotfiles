@@ -3,7 +3,7 @@
 
 # apps:
  
-niri swaybg swayimg swaylock waybar dunst fuzzel firefox kitty
+niri swaybg swayimg swaylock waybar dunst fuzzel firefox foot
 
 [neovim config files](https://github.com/bthnakkurt/nvim)
 
