@@ -23,10 +23,12 @@ git config --global credential.helper 'store'
 
 ## themes:
  gtk: https://www.gnome-look.org/p/1715554/
+ 
  kvantum: https://github.com/catppuccin/Kvantum/tree/main/themes
 
 ## icons:
  icon: https://www.google.com/search?q=papirus+github
+ 
  cursor: https://github.com/ful1e5/Bibata_Cursor/releases/tag/v2.0.7
 
 ## font:
