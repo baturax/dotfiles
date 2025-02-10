@@ -1,3 +1,6 @@
+ # install:
+ ``git clone --depth=1 https://github.com/baturax/dotfiles.git .config
+
 # apps:
  
 niri swaybg swayimg swaylock waybar dunst fuzzel firefox kitty
