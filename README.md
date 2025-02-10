@@ -1,5 +1,5 @@
  # install:
- ``git clone --depth=1 https://github.com/baturax/dotfiles.git .config
+ ``git clone --depth=1 https://github.com/baturax/dotfiles.git .config``
 
 # apps:
  
