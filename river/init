@@ -68,7 +68,7 @@ do
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
 done
 
-riverctl background-color 0x002b36
+riverctl background-color 0x4c4f69
 riverctl border-color-focused 0x93a1a1
 riverctl border-color-unfocused 0x586e75
 
@@ -83,4 +83,4 @@ rivertile -view-padding 6 -outer-padding 6 &
 
 riverctl spawn "waybar"
 riverctl spawn "foot"
-riverctl spawn "dunst"
+riverctl spawn "mako"
