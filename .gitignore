@@ -66,3 +66,15 @@ fish/conf.d
 fish/functions
 fish/fish_variables
 fish/fish_plugins
+vlc
+xsettingsd
+KDE
+btop
+plasma-localerc
+plasma-org.kde.plasma.desktop-appletsrc
+plasmashellrc
+powerdevilrc
+powermanagementprofilesrc
+Trolltech.conf
+xdg-desktop-portal-kderc
+baloofilerc

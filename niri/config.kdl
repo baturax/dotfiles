@@ -72,7 +72,6 @@ environment {
     DISPLAY ":0"
 }
 
-spawn-at-startup "pipewire"
 spawn-at-startup "swaybg" "-i" "/home/bai/.config/extra/Wallpaper/31.jpg"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
@@ -118,15 +117,14 @@ binds {
     Mod+C { spawn "foot"; }
     Mod+D { spawn "fuzzel"; }
     Mod+idotless { spawn "nwg-look" "&&" "qt5ct" "&&" "qt6ct"; }
-    Mod+E { spawn "dolphin"; }
+    Mod+E { spawn "nautilus"; }
     Mod+W { spawn "firefox"; }
     Super+Alt+L { spawn "swaylock"; }
     Mod+Period { spawn "bemoji" "-t"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
     Mod+Q { close-window; }
 

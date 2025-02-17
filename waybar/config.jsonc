@@ -2,7 +2,7 @@
 "layer": "top",
 "gtk-layer-shell": false,
 
-"modules-left": [ "niri/workspaces", "niri/window"],
+"modules-left": [ "sway/workspaces", "sway/window"],
 "modules-center": ["custom/spacebar", "custom/nautilus", "custom/spacebar2", "custom/terminal", "custom/spacebar2", "custom/browser", "custom/playing"],
 "modules-right": ["pulseaudio","battery","memory","cpu","clock","tray", "custom/turnoff" ],
 
