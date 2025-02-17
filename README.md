@@ -13,7 +13,7 @@ git config --global credential.helper 'store'
 
 # apps:
 
-``sudo pacman -S --needed niri foot fuzzel foot swaylock waybar swaybg dunst firefox mpv fish thunar htop neovim eza bat fastfetch brightnessctl``
+``sudo pacman -S --needed niri foot fuzzel foot swaylock waybar swaybg dunst firefox mpv fish thunar htop neovim eza bat fastfetch brightnessctl ly``
 
 # custom:
 
@@ -24,7 +24,7 @@ git config --global credential.helper 'store'
 [refind and ly](https://github.com/baturax/dotfiles/tree/main/extra/conf)
 
 # theming
- ``sudo pacman -S nwg-look kvantum kvantum-qt5 qt5ct qt6ct qt5-wayland qt6-wayland``
+ ``sudo pacman -S --needed nwg-look kvantum kvantum-qt5 qt5ct qt6ct qt5-wayland qt6-wayland``
 
 ## themes:
  gtk: https://www.gnome-look.org/p/1715554/
