@@ -13,7 +13,7 @@ git config --global credential.helper 'store'
 
 # apps:
 
-``sudo pacman -S --needed niri foot fuzzel foot swaylock waybar swaybg dunst firefox mpv fish thunar htop neovim eza bat fastfetch brightnessctl ly``
+``sudo pacman -S --needed niri foot fuzzel foot swaylock waybar swaybg mako firefox mpv fish thunar htop neovim eza bat fastfetch brightnessctl ly``
 
 # custom:
 
