@@ -1,9 +1,9 @@
 {
 	"window-size": {
-		"width": 945,
-		"height": 1036
+		"width": 1228,
+		"height": 737
 	},
-	"window-maximized": false,
+	"window-maximized": true,
 	"window-position": {
 		"x": 0,
 		"y": 0
@@ -18,12 +18,12 @@
 		"hideMenuWarned": false,
 		"startAtLogin": false,
 		"disableHardwareAcceleration": false,
-		"removeUpgradeButton": false,
+		"removeUpgradeButton": true,
 		"restartOnConfigChanges": false,
 		"trayClickPlayPause": false,
 		"autoResetAppCache": false,
 		"resumeOnStart": true,
-		"likeButtons": "",
+		"likeButtons": "force",
 		"proxy": "",
 		"startingPage": "",
 		"overrideUserAgent": false,
@@ -31,9 +31,15 @@
 		"themes": []
 	},
 	"plugins": {
-		"notifications": {},
+		"notifications": {
+			"enabled": true
+		},
 		"video-toggle": {
-			"mode": "custom"
+			"mode": "custom",
+			"enabled": true,
+			"hideVideo": false,
+			"forceHide": false,
+			"align": "left"
 		},
 		"precise-volume": {
 			"globalShortcuts": {}
@@ -41,13 +47,51 @@
 		"discord": {
 			"listenAlong": true
 		},
+		"quality-changer": {
+			"enabled": true
+		},
+		"synced-lyrics": {
+			"enabled": true
+		},
+		"sponsorblock": {
+			"enabled": true
+		},
+		"skip-disliked-songs": {
+			"enabled": true
+		},
+		"playback-speed": {
+			"enabled": true
+		},
+		"picture-in-picture": {
+			"enabled": true,
+			"alwaysOnTop": true,
+			"savePosition": true,
+			"saveSize": false,
+			"hotkey": "P",
+			"pip-position": [
+				10,
+				10
+			],
+			"pip-size": [
+				450,
+				275
+			],
+			"isInPiP": false,
+			"useNativePiP": true
+		},
 		"in-app-menu": {
 			"enabled": true
+		},
+		"downloader": {
+			"enabled": true
+		},
+		"compact-sidebar": {
+			"enabled": false
 		}
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.7.2"
+			"version": "3.7.4"
 		}
 	}
 }
