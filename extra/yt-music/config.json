@@ -1,14 +1,14 @@
 {
 	"window-size": {
-		"width": 1228,
-		"height": 737
+		"width": 1579,
+		"height": 881
 	},
-	"window-maximized": true,
+	"window-maximized": false,
 	"window-position": {
-		"x": 0,
-		"y": 0
+		"x": 107,
+		"y": 60
 	},
-	"url": "https://music.youtube.com",
+	"url": "https://music.youtube.com/watch?v=FSE-FPaWcrg&list=RDAMVMFSE-FPaWcrg&index=0",
 	"options": {
 		"tray": true,
 		"appVisible": true,
@@ -23,7 +23,7 @@
 		"trayClickPlayPause": false,
 		"autoResetAppCache": false,
 		"resumeOnStart": true,
-		"likeButtons": "force",
+		"likeButtons": "",
 		"proxy": "",
 		"startingPage": "",
 		"overrideUserAgent": false,
@@ -37,7 +37,7 @@
 		"video-toggle": {
 			"mode": "custom",
 			"enabled": true,
-			"hideVideo": false,
+			"hideVideo": true,
 			"forceHide": false,
 			"align": "left"
 		},
@@ -47,19 +47,20 @@
 		"discord": {
 			"listenAlong": true
 		},
-		"quality-changer": {
+		"in-app-menu": {
 			"enabled": true
 		},
-		"synced-lyrics": {
+		"bypass-age-restrictions": {
 			"enabled": true
 		},
-		"sponsorblock": {
+		"disable-autoplay": {
+			"enabled": true,
+			"applyOnce": true
+		},
+		"compact-sidebar": {
 			"enabled": true
 		},
-		"skip-disliked-songs": {
-			"enabled": true
-		},
-		"playback-speed": {
+		"downloader": {
 			"enabled": true
 		},
 		"picture-in-picture": {
@@ -79,19 +80,19 @@
 			"isInPiP": false,
 			"useNativePiP": true
 		},
-		"in-app-menu": {
+		"skip-disliked-songs": {
 			"enabled": true
 		},
-		"downloader": {
+		"synced-lyrics": {
 			"enabled": true
 		},
-		"compact-sidebar": {
-			"enabled": false
+		"quality-changer": {
+			"enabled": true
 		}
 	},
 	"__internal__": {
 		"migrations": {
-			"version": "3.7.4"
+			"version": "3.7.5"
 		}
 	}
 }
