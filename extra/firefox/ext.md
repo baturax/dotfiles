@@ -4,16 +4,15 @@ https://addons.mozilla.org/en-US/firefox/addon/adnauseam/
 
 https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/
 
-https://addons.mozilla.org/en-US/firefox/addon/google-sign-in-popup-blocker
+https://addons.mozilla.org/en-US/firefox/addon/google-sign-in-popup-blocker/
 
 https://addons.mozilla.org/en-US/firefox/addon/tureng-kelime-çeviri/
 
-https://addons.mozilla.org/en-US/firefox/addon/deepl-translate
+https://addons.mozilla.org/en-US/firefox/addon/deepl-translate/
 
 https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/
 
-https://addons.mozilla.org/en-US/firefox/addon/proton-pass/
-
+https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/
 
 ## userscript
 
