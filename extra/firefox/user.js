@@ -107,7 +107,7 @@ user_pref("signon.improvedPasswordRules.enabled", false);
 user_pref("services.sync.engine.passwords", false);
 user_pref("datareporting.policy.firstRunURL",) "31";
 user_pref("doh-rollout.doneFirstRun", false);
-user_pref("",);
+user_pref("signon.rememberSignons", false);
 user_pref("",);
 user_pref("",);
 user_pref("",);
