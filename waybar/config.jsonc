@@ -2,20 +2,9 @@
 "layer": "top",
 "gtk-layer-shell": false,
 
-"modules-left": [ "river/tags", "river/window"],
+"modules-left": [ "niri/workspaces", "niri/window"],
 "modules-center": ["custom/spacebar", "custom/nautilus", "custom/spacebar2", "custom/terminal", "custom/spacebar2", "custom/browser", "custom/playing"],
 "modules-right": ["pulseaudio","battery","memory","cpu","clock","tray", "custom/turnoff" ],
-
-"river/tags": {
-    "num-tags": 5,
-    "set-tags": [
-      2147483649,
-      2147483650,
-      2147483652,
-      2147483656,
-      2147483664
-    ]
-},
 
 "custom/turnoff": {
    "format": "󰐦 ",
@@ -127,7 +116,7 @@
 },
 
 "battery": {
-    "bat": "BAT1",
+    "bat": "BAT0",
     "interval": 60,
     "states": {
         "warning": 30,
