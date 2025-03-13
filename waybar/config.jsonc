@@ -9,6 +9,7 @@
 "custom/turnoff": {
    "format": "󰐦 ",
    "on-click": "m.k.a"
+   // https://github.com/baturax/power-menu-kotlin
 },
 
 "custom/browser": {
