@@ -9,6 +9,7 @@ input {
     }
 
     touchpad {
+    off
         tap
         natural-scroll
         
@@ -68,8 +69,9 @@ layout {
     }
 }
 
+spawn-at-startup "pipewire"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "alacritty"
+spawn-at-startup "foot"
 spawn-at-startup "waybar"
 screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -79,7 +81,7 @@ environment {
 }
 
 cursor {
-	xcursor-theme "Bibata-Modern-Classic"
+	xcursor-theme "Bibata-Modern-Amber"
 	xcursor-size 20
 }
 
@@ -91,7 +93,9 @@ animations {
 
 binds {
 
-    Mod+C { spawn "alacritty"; }
+    Mod+C { spawn "foot"; }
+    Mod+E { spawn "nautilus"; }
+    Mod+Shift+W { spawn "chromium"; }
     Mod+D { spawn "fuzzel"; }
     Mod+W { spawn "firefox"; }
     Super+Alt+L { spawn "swaylock"; }
@@ -129,15 +133,15 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
 
     Mod+Tab { focus-workspace-previous; }
 
