@@ -37,6 +37,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+	proportion 0.9
 	proportion 1.0
     }
 
@@ -70,19 +71,21 @@ layout {
 }
 
 spawn-at-startup "pipewire"
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "foot"
 spawn-at-startup "waybar"
+spawn-at-startup "dunst"
+spawn-at-startup "xwayland-satellite"
 screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
+prefer-no-csd
 environment {
     QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
 }
 
 cursor {
-	xcursor-theme "Bibata-Modern-Amber"
-	xcursor-size 20
+	xcursor-theme "Adwaita"
+	xcursor-size 16
 }
 
 animations {
@@ -97,7 +100,7 @@ binds {
     Mod+E { spawn "nautilus"; }
     Mod+Shift+W { spawn "chromium"; }
     Mod+D { spawn "fuzzel"; }
-    Mod+W { spawn "firefox"; }
+    Mod+W { spawn "chromium"; }
     Super+Alt+L { spawn "swaylock"; }
     Mod+Period { spawn "bemoji" "-t"; }
 

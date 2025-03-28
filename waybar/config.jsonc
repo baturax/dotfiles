@@ -15,13 +15,13 @@
 "custom/browser": {
    "format": " ",
    "tooltip": false,
-   "on-click": "firefox"
+   "on-click": "chromium"
 },
 
 "custom/terminal": {
    "format": " ",
    "tooltip": false,
-   "on-click": "kitty"
+   "on-click": "foot"
 },
 
 "custom/spacebar": {
