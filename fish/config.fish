@@ -14,3 +14,8 @@ alias pi="sudo pacman -S"
 alias pr="sudo pacman -R"
 alias prc="sudo pacman -Rnsc"
 alias free="free -h"
+
+function exit
+    jobs -q; and disown (jobs -p)
+    builtin exit
+end

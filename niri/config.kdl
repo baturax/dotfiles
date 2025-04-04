@@ -74,10 +74,9 @@ spawn-at-startup "pipewire"
 spawn-at-startup "foot"
 spawn-at-startup "waybar"
 spawn-at-startup "dunst"
-spawn-at-startup "xwayland-satellite"
-screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
+screenshot-path "~/Pictures/Screenshot/Screenshot from %Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
+
 environment {
     QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
@@ -94,18 +93,24 @@ animations {
     slowdown 0.9
 }
 
+window-rule {
+   match app-id="pinentry-gtk"
+
+   open-floating true
+}
+
 binds {
 
     Mod+C { spawn "foot"; }
     Mod+E { spawn "nautilus"; }
-    Mod+Shift+W { spawn "chromium"; }
+    Mod+Shift+W { spawn "firefox"; }
     Mod+D { spawn "fuzzel"; }
     Mod+W { spawn "chromium"; }
     Super+Alt+L { spawn "swaylock"; }
     Mod+Period { spawn "bemoji" "-t"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
