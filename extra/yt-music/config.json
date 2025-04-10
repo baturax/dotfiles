@@ -1,0 +1,115 @@
+{
+	"window-size": {
+		"width": 1709,
+		"height": 1036
+	},
+	"window-maximized": false,
+	"window-position": {
+		"x": 0,
+		"y": 0
+	},
+	"url": "https://music.youtube.com/watch?v=K_8yRH2KPVo&list=PLSS_WKCuoGUBuSbLmR4c8tIIRG8tX4nXl&index=0",
+	"options": {
+		"tray": true,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": false,
+		"hideMenuWarned": false,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": [
+			"/home/bai/.config/extra/yt-music/mocha.css"
+		]
+	},
+	"plugins": {
+		"notifications": {
+			"enabled": true
+		},
+		"video-toggle": {
+			"mode": "custom",
+			"enabled": true,
+			"hideVideo": true,
+			"forceHide": false,
+			"align": "left"
+		},
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"discord": {
+			"listenAlong": true
+		},
+		"in-app-menu": {
+			"enabled": true
+		},
+		"sponsorblock": {
+			"enabled": true
+		},
+		"skip-disliked-songs": {
+			"enabled": true
+		},
+		"picture-in-picture": {
+			"enabled": true,
+			"alwaysOnTop": true,
+			"savePosition": true,
+			"saveSize": false,
+			"hotkey": "P",
+			"pip-position": [
+				10,
+				10
+			],
+			"pip-size": [
+				450,
+				275
+			],
+			"isInPiP": false,
+			"useNativePiP": true
+		},
+		"downloader": {
+			"enabled": true
+		},
+		"bypass-age-restrictions": {
+			"enabled": true
+		},
+		"compact-sidebar": {
+			"enabled": true
+		},
+		"synced-lyrics": {
+			"enabled": true
+		},
+		"disable-autoplay": {
+			"enabled": true,
+			"applyOnce": true
+		},
+		"exponential-volume": {
+			"enabled": true
+		},
+		"quality-changer": {
+			"enabled": true
+		},
+		"tuna-obs": {
+			"enabled": true
+		},
+		"captions-selector": {
+			"enabled": true
+		},
+		"album-actions": {
+			"enabled": true
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.8.0"
+		}
+	}
+}

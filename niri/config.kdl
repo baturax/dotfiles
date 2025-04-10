@@ -24,7 +24,7 @@ output "eDP-1" {
     mode "1920x1080@59.999"
     scale 1
     variable-refresh-rate
-    background-color "#11111b"
+    background-color "#000000"
 }
 
 layout {
@@ -70,7 +70,6 @@ layout {
     }
 }
 
-spawn-at-startup "pipewire"
 spawn-at-startup "foot"
 spawn-at-startup "waybar"
 spawn-at-startup "dunst"
@@ -83,8 +82,8 @@ environment {
 }
 
 cursor {
-	xcursor-theme "Adwaita"
-	xcursor-size 16
+	xcursor-theme "Bibata-Original-Classic"
+	xcursor-size 20
 }
 
 animations {
@@ -101,18 +100,31 @@ window-rule {
 
 binds {
 
-    Mod+C { spawn "foot"; }
-    Mod+E { spawn "nautilus"; }
-    Mod+Shift+W { spawn "firefox"; }
-    Mod+D { spawn "fuzzel"; }
-    Mod+W { spawn "chromium"; }
-    Super+Alt+L { spawn "swaylock"; }
-    Mod+Period { spawn "bemoji" "-t"; }
+    Mod+C 		{ spawn "foot"; }
+    Mod+E 		{ spawn "nautilus"; }
+    Mod+Shift+W 	{ spawn "chromium"; }
+    Mod+D 		{ spawn "fuzzel"; }
+    Mod+W		{ spawn "firefox"; }
+    Super+Alt+L 	{ spawn "swaylock"; }
+    Mod+Period		{ spawn "bemoji" "-t"; }
+	
+    XF86AudioMute		{ spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    XF86AudioLowerVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-1%"; }
+    XF86AudioRaiseVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+1%"; }
+    XF86AudioMicMute		{ spawn "pactl" "set-source-mute" "0" "toggle"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
-    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86RFKill	 	{ quit; }
+    Help       		{ spawn "xdg-open" "https://github.com"; }
+    XF86PickupPhone	{ spawn "";}
+    XF86HangupPhone 	{ spawn "";}
+    XF86Calculator 	{ spawn "mate-calc";}
+
+    XF86AudioPlay 	{ spawn "playerctl" "play"; }
+    XF86AudioStop	{ spawn "playerctl" "pause"; }
+    XF86AudioPrev	{ spawn "playerctl" "previous"; }
+    XF86AudioNext	{ spawn "playerctl" "next"; }
+
+
 
     Mod+Q { close-window; }
 
@@ -141,6 +153,7 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
+
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
@@ -154,32 +167,32 @@ binds {
     Mod+Tab { focus-workspace-previous; }
 
     
-    Mod+M  { consume-or-expel-window-left; }
-    Mod+N { consume-or-expel-window-right; }
+    Mod+M	{ consume-or-expel-window-left; }
+    Mod+N	{ consume-or-expel-window-right; }
 
-    Mod+R { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
+    Mod+R 		{ switch-preset-column-width; }
+    Mod+Shift+R 	{ switch-preset-window-height; }
+    Mod+Ctrl+R		{ reset-window-height; }
+    Mod+F 		{ maximize-column; }
+    Mod+Shift+F		{ fullscreen-window; }
 
     Mod+Z { center-column; }
 
-    Mod+KP_Subtract { set-column-width "-10%"; }
-    Mod+KP_Add { set-column-width "+10%"; }
+    Mod+KP_Subtract	{ set-column-width "-10%"; }
+    Mod+KP_Add 		{ set-column-width "+10%"; }
 
-    Mod+Shift+KP_Subtract { set-window-height "-10%"; }
-    Mod+Shift+KP_Add { set-window-height "+10%"; }
+    Mod+Shift+KP_Subtract 	{ set-window-height "-10%"; }
+    Mod+Shift+KP_Add 		{ set-window-height "+10%"; }
 
     Mod+Space       { toggle-window-floating; }
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Print 		{ screenshot; }
+    Ctrl+Print 		{ screenshot-screen; }
+    Alt+Print 		{ screenshot-window; }
 
-    Mod+Shift+Q { quit; }
-    Ctrl+Alt+Delete { quit; }
+    Mod+Shift+Q 	{ quit; }
+    Ctrl+Alt+Delete 	{ quit; }
 
     Mod+Shift+P { power-off-monitors; }
 
