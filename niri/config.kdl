@@ -73,6 +73,7 @@ layout {
 spawn-at-startup "foot"
 spawn-at-startup "waybar"
 spawn-at-startup "dunst"
+spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/assets/uwu-debian-linux-fv-3840x2160.jpg"
 screenshot-path "~/Pictures/Screenshot/Screenshot from %Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
 
@@ -112,6 +113,9 @@ binds {
     XF86AudioLowerVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-1%"; }
     XF86AudioRaiseVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+1%"; }
     XF86AudioMicMute		{ spawn "pactl" "set-source-mute" "0" "toggle"; }
+
+    XF86MonBrightnessDown	{ spawn "brillo -A 5"; }
+    XF86MonBrightnessUp		{ spawn "brillo -U 5"; }
 
     XF86RFKill	 	{ quit; }
     Help       		{ spawn "xdg-open" "https://github.com"; }
