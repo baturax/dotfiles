@@ -33,7 +33,7 @@
 },
 
 "custom/nautilus": {
-   "format": "📂",
+   "format": " ",
    "tooltip": false,
    "on-click": "nautilus"
 },

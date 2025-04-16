@@ -1,4 +1,9 @@
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Input
+workspace "first"
+workspace "second"
+workspace "third"
+workspace "fourth"
+workspace "fifth"
+
 input {
     keyboard {
         xkb {
@@ -70,21 +75,24 @@ layout {
     }
 }
 
+spawn-at-startup "pipewire"
+spawn-at-startup "brillo" "-S" "100"
 spawn-at-startup "foot"
 spawn-at-startup "waybar"
+spawn-at-startup "/usr/libexec/xdg-desktop-portal-gnome"
 spawn-at-startup "dunst"
-spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/assets/uwu-debian-linux-fv-3840x2160.jpg"
+spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/assets/untitled.jpg" "-m" "stretch"
 screenshot-path "~/Pictures/Screenshot/Screenshot from %Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
 
 environment {
-    QT_QPA_PLATFORM "wayland"
+    //QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
 }
 
 cursor {
-	xcursor-theme "Bibata-Original-Classic"
-	xcursor-size 20
+	xcursor-theme "Bibata-Modern-Ice"
+	xcursor-size 16
 }
 
 animations {
@@ -99,13 +107,22 @@ window-rule {
    open-floating true
 }
 
+window-rule {
+   match app-id="Minecraft* 1.21.5"
+
+}
+
 binds {
 
-    Mod+C 		{ spawn "foot"; }
-    Mod+E 		{ spawn "nautilus"; }
+    Mod+C 		      { spawn "kitty"; }
+    Mod+Shift+C		{ spawn "foot"; }
+
+    Mod+E 		      { spawn "nautilus"; }
+    Mod+D 		      { spawn "fuzzel"; }
+
+    Mod+W		{ spawn "/home/bai/.local/app/zen/zen"; }
     Mod+Shift+W 	{ spawn "chromium"; }
-    Mod+D 		{ spawn "fuzzel"; }
-    Mod+W		{ spawn "firefox"; }
+
     Super+Alt+L 	{ spawn "swaylock"; }
     Mod+Period		{ spawn "bemoji" "-t"; }
 	
@@ -114,8 +131,8 @@ binds {
     XF86AudioRaiseVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+1%"; }
     XF86AudioMicMute		{ spawn "pactl" "set-source-mute" "0" "toggle"; }
 
-    XF86MonBrightnessDown	{ spawn "brillo -A 5"; }
-    XF86MonBrightnessUp		{ spawn "brillo -U 5"; }
+    XF86MonBrightnessDown	{ spawn "brillo" "-U" "5"; }
+    XF86MonBrightnessUp		{ spawn "brillo" "-A" "5"; }
 
     XF86RFKill	 	{ quit; }
     Help       		{ spawn "xdg-open" "https://github.com"; }
@@ -127,7 +144,6 @@ binds {
     XF86AudioStop	{ spawn "playerctl" "pause"; }
     XF86AudioPrev	{ spawn "playerctl" "previous"; }
     XF86AudioNext	{ spawn "playerctl" "next"; }
-
 
 
     Mod+Q { close-window; }
