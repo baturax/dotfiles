@@ -1,0 +1,12 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+GRADLE_USER_HOME=/home/bai/.cache/gradle
+_JAVA_OPTIONS=-Djava.util.prefs.userRoot=/home/bai/.cache/java
+GOPATH=/home/bai/.cache/go
+WGETRC="/home/bai/.cache/wgetrc
+GSK_RENDERER=cairo
+LC_ALL=C.UTF-8
+XDG_CONFIG_HOME=/home/bai/.config
