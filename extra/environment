@@ -12,3 +12,7 @@ XDG_BIN_HOME=/home/bai/.local/bin/
 XDG_DOWNLOAD_DIR=/home/bai/Downloads/
 XDG_PICTURES_DIR=/home/bai/Pictures/
 XDG_VIDEOS_DIR=/home/bai/Pictures/Videos/
+CARGO_HOME="$XDG_DATA_HOME"/cargo
+WGETRC="$XDG_CONFIG_HOME/wgetrc"
+HISTFILE="$XDG_CACHE_HOME"/bash/history
+# export GNUPGHOME="$XDG_DATA_HOME"/gnupg, gpg2 --homedir "$XDG_DATA_HOME"/gnupg

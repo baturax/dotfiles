@@ -116,8 +116,8 @@ window-rule {
 
 binds {
 
-    Mod+C 		      { spawn "kitty"; }
-    Mod+Shift+C		{ spawn "foot"; }
+    Mod+C 		      { spawn "foot"; }
+    Mod+Shift+C		{ spawn "kitty"; }
 
     Mod+E 		      { spawn "nautilus"; }
     Mod+D 		      { spawn "fuzzel"; }
