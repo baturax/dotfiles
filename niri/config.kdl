@@ -101,8 +101,10 @@ animations {
     slowdown 0.9
 }
 
+// Floating app
 window-rule {
    match app-id="pinentry-gtk"
+   match app-id="^jetbrains" title="^$"
 
    open-floating true
 }

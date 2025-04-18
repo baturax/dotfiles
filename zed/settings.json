@@ -18,5 +18,10 @@
     "mode": "system",
     "light": "Gruvbox Dark",
     "dark": "One Dark"
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
   }
 }
