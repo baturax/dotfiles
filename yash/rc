@@ -1,0 +1,110 @@
+alias ch="chmod +x"
+alias sudo="sudo -E"
+alias doas="sudo -E"
+alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension"
+alias cat="bat"
+alias c="clear"
+alias gc="git clone"
+alias pi="sudo xbps-install"
+alias pr="sudo xbps-remove"
+alias prc="sudo xbps-remove -RfF"
+alias free="free -h"
+alias r="rm -rf"
+alias m="mkdir -p"
+alias ..="cd .."
+
+
+COMMAND_NOT_FOUND_HANDLER=()
+
+
+if [ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]; then
+fi
+
+# when a directory name is entered as a command, treat as "cd"
+_autocd()
+if [ -d "$1" ]; then
+  HANDLED=true
+  cd -- "$@"
+  break -i
+fi
+COMMAND_NOT_FOUND_HANDLER=("$COMMAND_NOT_FOUND_HANDLER" '_autocd "$@"')
+
+# define prompt
+if [ -n "${SSH_CONNECTION-}" ]; then
+  _hc='\fy.'     # yellow hostname for SSH remote
+else
+  _hc='\fg.'     # green hostname for local
+fi
+if [ "$(id -u)" -eq 0 ]; then
+  _uc='\fr.'     # red username for root
+  _2c='\fr.'     # red PS2 for root
+else
+  _uc=$_hc _hc=  # same username color as hostname for non-root user
+  _2c=           # PS2 in normal color for non-root user
+fi
+
+# ensure job control works as expected
+case $- in (*m*)
+  trap - TSTP TTIN TTOU
+esac
+
+# Dont Be Dumb
+cp() if [ -t 0 ]; then command cp -i "$@"; else command cp "$@"; fi
+mv() if [ -t 0 ]; then command mv -i "$@"; else command mv "$@"; fi
+rm() if [ -t 0 ]; then command rm -i "$@"; else command rm "$@"; fi
+
+# if yash is built with line-editing enabled...
+
+if command --identify --builtin-command bindkey >/dev/null; then
+
+  set --notify-le
+
+  set --le-no-conv-meta
+
+  set --le-predict
+
+  if [ -o vi ]; then
+    set --emacs
+  fi
+
+fi
+
+# History
+if command --identify --builtin-command history >/dev/null; then
+  set --hist-space
+    history()
+  if [ -t 0 ] && (
+    for arg do
+      case "${arg}" in
+        (-[drsw]?* | --*=*) ;;
+        (-*c*) exit;;
+      esac
+    done
+    false
+  ) then
+    printf 'history: seems you are trying to clear the whole history.\n' >&2
+    printf 'are you sure? (yes/no) ' >&2
+    case "$(head -n 1)" in
+      ([Yy]*) command history "$@";;
+      (*)     printf 'history: cancelled.\n' >&2;;
+    esac
+  else
+    command history "$@"
+  fi
+
+fi
+if ! [ "${HISTFILE-}" ]; then
+    HISTFILE=${XDG_STATE_HOME:-~/.local/state}/yash/history
+
+    # handle old default history path
+    if [ -f ~/.yash_history ]; then
+        printf 'Note: The default history file location has been changed to "%s".\n' "$HISTFILE" >&2
+        HISTFILE=~/.yash_history
+        printf 'Please consider moving the existing file from the current location "%s".\n' "$HISTFILE" >&2
+    fi
+fi
+
+# Startup Script
+fastfetch -c examples/8.jsonc
+
+# vim: set et sw=2 sts=2 tw=78 ft=sh:
