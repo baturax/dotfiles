@@ -91,20 +91,19 @@ environment {
 }
 
 cursor {
-	xcursor-theme "Bibata-Modern-Ice"
+   xcursor-theme "Adwaita"
 	xcursor-size 16
 }
 
 animations {
     // off
 
-    slowdown 0.9
+    slowdown 0.5
 }
 
 // Floating app
 window-rule {
    match app-id="pinentry-gtk"
-   match app-id="^jetbrains" title="^$"
 
    open-floating true
 }
@@ -122,7 +121,7 @@ binds {
     Mod+E 		      { spawn "nautilus"; }
     Mod+D 		      { spawn "fuzzel"; }
 
-    Mod+W		{ spawn "/home/bai/.local/app/zen/zen"; }
+    Mod+W		{ spawn "firefox"; }
     Mod+Shift+W 	{ spawn "chromium"; }
 
     Super+Alt+L 	{ spawn "swaylock"; }
@@ -189,8 +188,8 @@ binds {
     Mod+Tab { focus-workspace-previous; }
 
     
-    Mod+M	{ consume-or-expel-window-left; }
-    Mod+N	{ consume-or-expel-window-right; }
+    Mod+N	{ consume-or-expel-window-left; }
+    Mod+M	{ consume-or-expel-window-right; }
 
     Mod+R 		{ switch-preset-column-width; }
     Mod+Shift+R 	{ switch-preset-window-height; }
