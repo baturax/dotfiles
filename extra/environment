@@ -12,7 +12,18 @@ XDG_BIN_HOME=/home/bai/.local/bin/
 XDG_DOWNLOAD_DIR=/home/bai/Downloads/
 XDG_PICTURES_DIR=/home/bai/Pictures/
 XDG_VIDEOS_DIR=/home/bai/Pictures/Videos/
-CARGO_HOME="$XDG_DATA_HOME"/cargo
-WGETRC="$XDG_CONFIG_HOME/wgetrc"
+CARGO_HOME="$XDG_CACHE_HOME"/cargo
 HISTFILE="$XDG_CACHE_HOME"/bash/history
-# export GNUPGHOME="$XDG_DATA_HOME"/gnupg, gpg2 --homedir "$XDG_DATA_HOME"/gnupg
+export GNUPGHOME="$XDG_CACHE_HOME"/gnupg
+#gpg2 --homedir "$XDG_DATA_HOME"/gnupg
+#
+ADB_VENDOR_KEYS="$XDG_CACHE_HOME"/android/
+ANDROID_USER_HOME="$XDG_CACHE_HOME"/android
+ANDROID_EMULATOR_HOME="$XDG_CACHE_HOME"/android/
+ANDROID_AVD_HOME="$XDG_CACHE_HOME"/android/avd
+GRADLE_USER_HOME=~/.cache/gradle
+GOPATH="$XDG_CACHE_HOME"/go
+GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+RUSTUP_HOME="$XDG_CACHE_HOME"/rustup
+NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
