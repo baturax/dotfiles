@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_edit_predictions": false,
   "telemetry": {
     "diagnostics": true,
     "metrics": false
@@ -16,12 +17,12 @@
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Dark",
-    "dark": "One Dark"
+    "light": "Ayu Dark",
+    "dark": "Ayu Mirage"
   },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000
+      "milliseconds": 500
     }
   }
 }

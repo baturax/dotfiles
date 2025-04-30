@@ -12,5 +12,10 @@ return {
       capabilities = capabilities,
     })
 
+    lspconfig['vala_ls'].setup({
+      capabilities = capabilities,
+    })
+
+
   end,
 }

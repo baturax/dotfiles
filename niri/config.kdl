@@ -1,151 +1,160 @@
-workspace "first"
-workspace "second"
-workspace "third"
-workspace "fourth"
-workspace "fifth"
-
 input {
     keyboard {
-        xkb {
-	layout "tr"
-        }
-	repeat-delay 300
-	repeat-rate 30
+       repeat-delay 300
+       repeat-rate 30
+       xkb {
+          layout "tr"
+       }
     }
-
     touchpad {
-    off
+        //off
         tap
+        dwt
+        dwtp
         natural-scroll
-        
+        scroll-method "two-finger"
     }
-
-    mouse {
-    }
-    focus-follows-mouse max-scroll-amount="100%"
+    focus-follows-mouse max-scroll-amount="0%"
+    workspace-auto-back-and-forth
 }
 
 output "eDP-1" {
     mode "1920x1080@59.999"
     scale 1
     variable-refresh-rate
-    background-color "#000000"
+    background-color "#101820"
+    backdrop-color "#020202"
 }
 
 layout {
     gaps 10
     center-focused-column "never"
     always-center-single-column
+    
 
     preset-column-widths {
-        // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-	proportion 0.9
-	proportion 1.0
+    	proportion 0.9
+    	proportion 1.0
     }
 
-    preset-window-heights { 
-    	proportion 0.33333
-	proportion 0.5
-	proportion 0.66667
-	proportion 1.0
+    default-column-width {
+        proportion 0.5
     }
     
-    default-column-width { proportion 0.5; }
-
-    focus-ring {
-    	width 4
-        active-color "#b4befe"
-        inactive-color "#a6e3a1"
+    preset-window-heights {
+        proportion 0.33333
+    	proportion 0.5
+    	proportion 0.66667
+    	proportion 1.0
     }
 
-    border {
-        off
+    focus-ring {
+        width 3
+        active-color "#9a318a"
+        inactive-color "#505050"
     }
 
     shadow {
         on
-        softness 30
+        softness 20
         spread 5
         offset x=0 y=5
-        // You can also change the shadow color and opacity.
-        color "#11111b"
+        draw-behind-window true
+        color "#0007"
+    }
+    
+    insert-hint {
+        gradient from="#505050" to="#9a318a" angle=45 relative-to="workspace-view"
+    }
+    
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
     }
 }
 
-spawn-at-startup "pipewire"
-spawn-at-startup "brillo" "-S" "100"
-spawn-at-startup "foot"
-spawn-at-startup "waybar"
-spawn-at-startup "/usr/libexec/xdg-desktop-portal-gnome"
-spawn-at-startup "dunst"
-spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/assets/untitled.jpg" "-m" "stretch"
-screenshot-path "~/Pictures/Screenshot/Screenshot from %Y-%m-%d %H-%M-%S.png"
+spawn-at-startup "mako"
+spawn-at-startup "kitty"
+
 prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
-    //QT_QPA_PLATFORM "wayland"
-    DISPLAY ":0"
+    QT_QPA_PLATFORM "wayland"
+    DISPLAY null
 }
 
 cursor {
-   xcursor-theme "Adwaita"
-	xcursor-size 16
+    xcursor-theme "macOS"
+    xcursor-size 22
+}
+
+overview {
+    zoom 0.5
 }
 
 animations {
-    // off
 
-    slowdown 0.5
+    slowdown 1.5
 }
 
-// Floating app
+    // Float
 window-rule {
-   match app-id="pinentry-gtk"
-
-   open-floating true
+        //  ID
+    match app-id="floatingcat"
+    match app-id="org.gnome.Notes"
+        //  Title
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    
+    open-floating true
 }
 
+    //  opacity
 window-rule {
-   match app-id="Minecraft* 1.21.5"
+    match app-id="org.gnome.Notes"
+    match app-id="floatingcat"
+    
+    opacity 0.5
+}
 
+    // Enable rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 8
+    clip-to-geometry true
 }
 
 binds {
+    Mod+Shift+asterisk { show-hotkey-overlay; }
 
-    Mod+C 		      { spawn "foot"; }
-    Mod+Shift+C		{ spawn "kitty"; }
+    Mod+C               { spawn "kitty"; }
+    Mod+Shift+C         { spawn "kitty" "--class" "floatingcat"; }
 
-    Mod+E 		      { spawn "nautilus"; }
-    Mod+D 		      { spawn "fuzzel"; }
+    Mod+W               { spawn "firefox"; }
+    Mod+Shift+W         { spawn "chromium"; }
 
-    Mod+W		{ spawn "firefox"; }
-    Mod+Shift+W 	{ spawn "chromium"; }
+    Mod+D               { spawn "fuzzel"; }
+    Mod+E               { spawn "nautilus"; }
+    Mod+S               { spawn "bijiben"; }
+    
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
+    XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
-    Super+Alt+L 	{ spawn "swaylock"; }
-    Mod+Period		{ spawn "bemoji" "-t"; }
-	
-    XF86AudioMute		{ spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
-    XF86AudioLowerVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-1%"; }
-    XF86AudioRaiseVolume	{ spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+1%"; }
-    XF86AudioMicMute		{ spawn "pactl" "set-source-mute" "0" "toggle"; }
-
-    XF86MonBrightnessDown	{ spawn "brillo" "-U" "5"; }
-    XF86MonBrightnessUp		{ spawn "brillo" "-A" "5"; }
-
-    XF86RFKill	 	{ quit; }
     Help       		{ spawn "xdg-open" "https://github.com"; }
-    XF86PickupPhone	{ spawn "";}
-    XF86HangupPhone 	{ spawn "";}
     XF86Calculator 	{ spawn "mate-calc";}
-
+    
     XF86AudioPlay 	{ spawn "playerctl" "play"; }
     XF86AudioStop	{ spawn "playerctl" "pause"; }
     XF86AudioPrev	{ spawn "playerctl" "previous"; }
     XF86AudioNext	{ spawn "playerctl" "next"; }
 
+    Mod+0 repeat=false { toggle-overview; }
 
     Mod+Q { close-window; }
 
@@ -158,12 +167,23 @@ binds {
     Mod+Shift+Down  { move-window-down; }
     Mod+Shift+Up    { move-window-up; }
     Mod+Shift+Right { move-column-right; }
- 
-    Mod+Shift+WheelScrollDown       { focus-workspace-down; }
-    Mod+Shift+WheelScrollUp         { focus-workspace-up; }
+
+    Mod+Shift+WheelScrollDown             { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp               { focus-workspace-up; }
+    
+    Mod+Ctrl+WheelScrollDown        { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp          { move-column-to-workspace-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
 
     Mod+WheelScrollDown      { focus-column-right; }
     Mod+WheelScrollUp        { focus-column-left; }
+
+    Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
+    Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -174,48 +194,47 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-
-    Mod+Shift+1 { move-column-to-workspace 1; }
-    Mod+Shift+2 { move-column-to-workspace 2; }
-    Mod+Shift+3 { move-column-to-workspace 3; }
-    Mod+Shift+4 { move-column-to-workspace 4; }
-    Mod+Shift+5 { move-column-to-workspace 5; }
-    Mod+Shift+6 { move-column-to-workspace 6; }
-    Mod+Shift+7 { move-column-to-workspace 7; }
-    Mod+Shift+8 { move-column-to-workspace 8; }
-    Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+1 { move-window-to-workspace 1; }
+    Mod+Shift+2 { move-window-to-workspace 2; }
+    Mod+Shift+3 { move-window-to-workspace 3; }
+    Mod+Shift+4 { move-window-to-workspace 4; }
+    Mod+Shift+5 { move-window-to-workspace 5; }
+    Mod+Shift+6 { move-window-to-workspace 6; }
+    Mod+Shift+7 { move-window-to-workspace 7; }
+    Mod+Shift+8 { move-window-to-workspace 8; }
+    Mod+Shift+9 { move-window-to-workspace 9; }
 
     Mod+Tab { focus-workspace-previous; }
+    Mod+N  { consume-or-expel-window-left; }
+    Mod+M { consume-or-expel-window-right; }
 
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+A { center-column; }
     
-    Mod+N	{ consume-or-expel-window-left; }
-    Mod+M	{ consume-or-expel-window-right; }
-
-    Mod+R 		{ switch-preset-column-width; }
-    Mod+Shift+R 	{ switch-preset-window-height; }
-    Mod+Ctrl+R		{ reset-window-height; }
-    Mod+F 		{ maximize-column; }
-    Mod+Shift+F		{ fullscreen-window; }
-
-    Mod+Z { center-column; }
-
-    Mod+KP_Subtract	{ set-column-width "-10%"; }
-    Mod+KP_Add 		{ set-column-width "+10%"; }
-
-    Mod+Shift+KP_Subtract 	{ set-window-height "-10%"; }
-    Mod+Shift+KP_Add 		{ set-window-height "+10%"; }
+    Mod+KP_Subtract { set-column-width "-10%"; }
+    Mod+KP_Add { set-column-width "+10%"; }
+    Mod+Shift+KP_Subtract { set-window-height "-10%"; }
+    Mod+Shift+KP_Add { set-window-height "+10%"; }
 
     Mod+Space       { toggle-window-floating; }
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
-    Print 		{ screenshot; }
-    Ctrl+Print 		{ screenshot-screen; }
-    Alt+Print 		{ screenshot-window; }
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
 
-    Mod+Shift+Q 	{ quit; }
-    Ctrl+Alt+Delete 	{ quit; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
+    // The quit action will show a confirmation dialog to avoid accidental exits.
+    Mod+Shift+Q { quit; }
+    Ctrl+Alt+Delete { quit; }
+
+    // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
-
-
 }
