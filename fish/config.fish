@@ -16,6 +16,7 @@ alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperl
 alias cat="bat"
 alias c="clear"
 alias ch="chmod +x"
+alias mc="meson compile"
 
    #  Shortcut
 alias free="free -h"
