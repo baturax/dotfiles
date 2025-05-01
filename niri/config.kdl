@@ -131,6 +131,7 @@ binds {
     Mod+D               { spawn "fuzzel"; }
     Mod+E               { spawn "nautilus"; }
     Mod+S               { spawn "bijiben"; }
+    Mod+Period          { spawn "bemoji" "-t"; }
     
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
