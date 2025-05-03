@@ -14,9 +14,10 @@ alias prd="sudo pacman -Rdd"
    #  Misc
 alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension"
 alias cat="bat"
-alias c="clear"
 alias ch="chmod +x"
 alias mc="meson compile"
+alias man="batman"
+alias c="printf '\033[2J\033[3J\033[1;1H'"
 
    #  Shortcut
 alias free="free -h"

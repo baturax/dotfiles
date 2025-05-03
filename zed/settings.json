@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "hide_gitignore": false
+  },
+  "icon_theme": "Charmed Icons",
   "show_edit_predictions": false,
   "telemetry": {
     "diagnostics": true,
@@ -18,11 +22,12 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Dark",
-    "dark": "Ayu Mirage"
+    "dark": "Ayu Dark"
   },
   "autosave": {
     "after_delay": {
       "milliseconds": 500
     }
-  }
+  },
+  "soft_wrap": "editor_width"
 }

@@ -7,7 +7,7 @@ input {
        }
     }
     touchpad {
-        //off
+        off
         tap
         dwt
         dwtp
@@ -94,8 +94,10 @@ window-rule {
         //  ID
     match app-id="floatingcat"
     match app-id="org.gnome.Notes"
+    match app-id="org.gnome.Nautilus"
         //  Title
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+
     
     open-floating true
 }
@@ -104,13 +106,14 @@ window-rule {
 window-rule {
     match app-id="org.gnome.Notes"
     match app-id="floatingcat"
+    match app-id="org.gnome.Nautilus"
     
     focus-ring {
         off
         width 3
         active-color "#0000FF80"
     }
-    opacity 0.7
+    opacity 0.8
 }
 
     // Enable rounded corners for all windows.
@@ -132,6 +135,7 @@ binds {
     Mod+E               { spawn "nautilus"; }
     Mod+S               { spawn "bijiben"; }
     Mod+Period          { spawn "bemoji" "-t"; }
+    Mod+V               { spawn "pavucontrol"; }
     
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
@@ -143,10 +147,13 @@ binds {
     
     XF86AudioPlay 	{ spawn "playerctl" "play"; }
     XF86AudioStop	{ spawn "playerctl" "pause"; }
+    XF86AudioPause	{ spawn "playerctl" "play-pause"; }
+
     XF86AudioPrev	{ spawn "playerctl" "previous"; }
     XF86AudioNext	{ spawn "playerctl" "next"; }
 
-    Mod+0 repeat=false { toggle-overview; }
+    Mod+0 { toggle-overview; }
+    Mod+quotedbl { toggle-overview; }
 
     Mod+Q { close-window; }
 
