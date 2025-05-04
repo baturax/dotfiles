@@ -63,12 +63,31 @@ return {
          })
       end
    },
-   
+
    {
       "TheLeoP/powershell.nvim",
       opts = {
          bundle_path = '/opt/powershell-editor-services'
       }
+   },
+
+   {
+      "kdheepak/lazygit.nvim",
+      dependencies = {
+         "nvim-lua/plenary.nvim"
+      }
+   },
+
+   {
+      "Aasim-A/scrollEOF.nvim",
+      event = {
+         "CursorMoved",
+         "WinScrolled"
+      },
+      config = function ()
+         require("scrollEOF").setup()
+         
+      end
    }
 
 }

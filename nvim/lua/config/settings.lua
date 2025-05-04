@@ -1,17 +1,23 @@
-vim.g.mapleader = " "
+local opt = vim.opt
+local o = vim.o
+local g=vim.g
 
-vim.o.tabstop = 3
-vim.o.expandtab = true 
-vim.o.softtabstop = 3 
-vim.o.shiftwidth = 3
+g.mapleader = " "
 
-vim.opt.clipboard:append("unnamedplus")
-vim.opt.undofile = true
+o.tabstop = 3
+o.expandtab = true 
+o.softtabstop = 3 
+o.shiftwidth = 3
+
+opt.clipboard:append("unnamedplus")
+opt.undofile = true
 vim.wo.number = true
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.opt.termguicolors = true
-vim.opt.tabpagemax=50
+loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+opt.termguicolors = true
+opt.shortmess:append "sI"
+opt.shortmess:append "sI"
+opt.scrolloff = 10
 
 vim.cmd("NoNeckPain")
 
