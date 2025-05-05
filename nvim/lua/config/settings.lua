@@ -35,3 +35,6 @@ map(modes, "<A-w>", "<Cmd>BufferClose<CR>", opts)
 map("i", "<A-e>", "<Esc>:Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 map("n", "<A-e>", "<Cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>", opts)
 
+vim.keymap.set('n', '<A-Right>', '<C-w>l')
+vim.keymap.set('n', '<A-Left>', '<C-w>h')
+

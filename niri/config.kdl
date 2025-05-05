@@ -107,6 +107,7 @@ window-rule {
     match app-id="org.gnome.Notes"
     match app-id="floatingcat"
     match app-id="org.gnome.Nautilus"
+    match app-id="com.github.th_ch.youtube_music"
     
     focus-ring {
         off
@@ -224,7 +225,9 @@ binds {
     Mod+Space       { toggle-window-floating; }
     Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
-    Print { screenshot; }
+    Print {
+       spawn "niri" "msg" "action" "screenshot";
+    }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
