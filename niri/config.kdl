@@ -7,7 +7,7 @@ input {
        }
     }
     touchpad {
-        //off
+        off
         tap
         dwt
         dwtp
@@ -66,18 +66,21 @@ layout {
 
 spawn-at-startup "mako"
 spawn-at-startup "kitty"
-
+spawn-at-startup "Bai_bar"
+spawn-at-startup "Bai_wallpaper"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
     QT_QPA_PLATFORM "wayland"
-    DISPLAY null
+    DISPLAY ":0"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    OZONE_PLATFORM "wayland"
 }
 
 cursor {
-    xcursor-theme "macOS"
-    xcursor-size 22
+    xcursor-theme "Bibata-Modern-Ice"
+    xcursor-size 16
 }
 
 overview {
@@ -129,8 +132,8 @@ binds {
     Mod+C               { spawn "kitty"; }
     Mod+Shift+C         { spawn "kitty" "--class" "floatingcat"; }
 
-    Mod+W               { spawn "firefox"; }
-    Mod+Shift+W         { spawn "chromium"; }
+    Mod+W               { spawn "chromium"; }
+    Mod+Shift+W         { spawn "firefox"; }
 
     Mod+D               { spawn "fuzzel"; }
     Mod+E               { spawn "nautilus"; }
@@ -148,7 +151,6 @@ binds {
     
     XF86AudioPlay 	{ spawn "playerctl" "play"; }
     XF86AudioStop	{ spawn "playerctl" "pause"; }
-    XF86AudioPause	{ spawn "playerctl" "play-pause"; }
 
     XF86AudioPrev	{ spawn "playerctl" "previous"; }
     XF86AudioNext	{ spawn "playerctl" "next"; }
