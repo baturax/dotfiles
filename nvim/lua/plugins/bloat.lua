@@ -18,10 +18,6 @@ return {
    },
 
    {
-      "fedepujol/bracketpair.nvim"
-   },
-
-   {
       "nvim-telescope/telescope.nvim", tag = '0.1.8',
       dependencies = { 'nvim-lua/plenary.nvim' },
       config = function ()
@@ -65,13 +61,6 @@ return {
    },
 
    {
-      "TheLeoP/powershell.nvim",
-      opts = {
-         bundle_path = '/opt/powershell-editor-services'
-      }
-   },
-
-   {
       "kdheepak/lazygit.nvim",
       dependencies = {
          "nvim-lua/plenary.nvim"
@@ -96,13 +85,31 @@ return {
 
    {
       "nvim-neo-tree/neo-tree.nvim",
-       branch = "v3.x",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    "MunifTanjim/nui.nvim",
-   {"3rd/image.nvim", opts = {}},
-  },
+      branch = "v3.x",
+      dependencies = {
+         "nvim-lua/plenary.nvim",
+         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+         "MunifTanjim/nui.nvim",
+         {"3rd/image.nvim", opts = {}},
+      },
+   },
+
+   {
+      "nvim-treesitter/nvim-treesitter"
+   },
+
+   {
+      "hiphish/rainbow-delimiters.nvim",
+      config = function ()
+      	require('rainbow-delimiters.setup').setup {
+
+         }
+      end
+   },
+
+   {
+      "nvim-treesitter/nvim-treesitter-context"
    }
+
 }
 
