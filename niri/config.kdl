@@ -72,7 +72,6 @@ prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
-    QT_QPA_PLATFORM "wayland"
     DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     OZONE_PLATFORM "wayland"
