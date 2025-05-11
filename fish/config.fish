@@ -5,7 +5,7 @@ alias gpull="git pull"
 alias gcommit="git commit"
 
    #  System
-alias pi="sudo pacman -S"
+alias pi="sudo pacman -S --needed"
 alias pu="sudo pacman -Suy"
 alias pr="sudo pacman -R"
 alias prc="sudo pacman -Rnsc"
@@ -14,15 +14,18 @@ alias prd="sudo pacman -Rdd"
    #  Misc
 alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension"
 alias cat="bat"
-alias ch="chmod +x"
 alias mc="meson compile"
 alias man="batman"
 alias c="printf '\033[2J\033[3J\033[1;1H'"
+alias c_history="rm $HOME/.local/share/fish/fish_history"
 
    #  Shortcut
 alias free="free -h"
 alias r="rm -rfiv"
 alias m="mkdir -pv"
+alias n="ninja"
+alias ch="chmod +x"
+alias lg="lazygit"
 
    #  Exports
 export gh="https://github.com/"

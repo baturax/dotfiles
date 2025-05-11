@@ -65,7 +65,7 @@ layout {
 }
 
 spawn-at-startup "mako"
-spawn-at-startup "kitty"
+spawn-at-startup "alacritty"
 spawn-at-startup "Bai_bar"
 spawn-at-startup "Bai_wallpaper"
 prefer-no-csd
@@ -128,11 +128,11 @@ window-rule {
 binds {
     Mod+Shift+asterisk { show-hotkey-overlay; }
 
-    Mod+C               { spawn "kitty"; }
-    Mod+Shift+C         { spawn "kitty" "--class" "floatingcat"; }
+    Mod+C               { spawn "alacritty"; }
+    Mod+Shift+C         { spawn "alacritty" "--class" "floatingcat"; }
 
-    Mod+W               { spawn "chromium"; }
-    Mod+Shift+W         { spawn "firefox"; }
+    Mod+W               { spawn "firefox"; }
+    Mod+Shift+W         { spawn "chromium"; }
 
     Mod+D               { spawn "fuzzel"; }
     Mod+E               { spawn "nautilus"; }
