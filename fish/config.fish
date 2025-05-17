@@ -16,6 +16,7 @@ alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperl
 alias cat="bat"
 alias mc="meson compile"
 alias man="batman"
+alias df="duf"
 alias c="printf '\033[2J\033[3J\033[1;1H'"
 alias c_history="rm $HOME/.local/share/fish/fish_history"
 
@@ -26,6 +27,7 @@ alias m="mkdir -pv"
 alias n="ninja"
 alias ch="chmod +x"
 alias lg="lazygit"
+alias t="touch"
 
    #  Exports
 export gh="https://github.com/"
@@ -43,10 +45,4 @@ function fish_greeting
     fastfetch -c examples/8.jsonc
 end
 
-   #  Cd verbose
-function cd
-   set -l prev_pwd (pwd)
-   if builtin cd $argv
-   printf '%s -> %s\n' $prev_pwd (pwd)
-   end
-end
+zoxide init fish | source

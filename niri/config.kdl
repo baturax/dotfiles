@@ -66,8 +66,7 @@ layout {
 
 spawn-at-startup "mako"
 spawn-at-startup "alacritty"
-spawn-at-startup "Bai_bar"
-spawn-at-startup "Bai_wallpaper"
+spawn-at-startup "baibar"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -115,6 +114,7 @@ window-rule {
         off
         width 3
         active-color "#0000FF80"
+        urgent-color "#9b0000"
     }
     opacity 0.8
 }
