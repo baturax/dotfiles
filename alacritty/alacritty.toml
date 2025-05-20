@@ -15,7 +15,7 @@ normal = { family = "monospace_font", style = "Regular" }
 bold = { family = "monospace_font", style = "Bold" }
 italic = { family = "monospace_font", style = "Italic" }
 bold_italic = { family = "monospace", style = "Bold Italic" }
-size = 11.0
+size = 11
 
 [colors]
 transparent_background_colors = false
