@@ -14,6 +14,8 @@ map({"n", "i"}, "<A-9>", "<Cmd>buffer 9<Cr>")
 map({"n", "i"}, "<A-w>", "<Cmd>bdelete!<Cr>")
 
 map({"n", "i"}, "<A-e>", "<Cmd>Neotree toggle<Cr>")
+map({"n", "i"}, "<A-S-e>", "<Cmd>Yazi<Cr>")
+
 
 vim.keymap.set({"n", "i"}, '<A-Right>', '<cmd>wincmd l<cr>')
 vim.keymap.set({"n", "i"}, '<A-Left>', '<cmd>wincmd h<cr>')
@@ -24,6 +26,8 @@ vim.api.nvim_set_keymap('i', '<C-Down>', '<C-E>', { noremap = true, silent = tru
 
 vim.keymap.set({"n", "i"}, "<C-Down>", "<C-e>")
 vim.keymap.set({"n", "i"}, "<C-Up>", "<C-y>")
+
+
 
 neoscroll = require('neoscroll')
 local keymap = {
