@@ -146,7 +146,10 @@ binds {
     Mod+Shift+W         { spawn "zen-browser"; }
 
     Mod+D               { spawn "fuzzel"; }
+
     Mod+E               { spawn "nautilus"; }
+    Mod+Shift+E         { spawn "alacritty" "-e" "yazi"; }
+
     Mod+S               { spawn "bijiben"; }
     Mod+Period          { spawn "bemoji" "-t"; }
     Mod+V               { spawn "pavucontrol"; }
