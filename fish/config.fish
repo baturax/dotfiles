@@ -3,6 +3,7 @@ alias gclone="git clone"
 alias gpush="git push"
 alias gpull="git pull"
 alias gcommit="git commit"
+alias gsa="git submodule add"
 
    #  System
 alias pi="sudo pacman -S --needed"
@@ -28,6 +29,11 @@ alias n="ninja"
 alias ch="chmod +x"
 alias lg="lazygit"
 alias t="touch"
+alias ..="cd .."
+alias ...="cd .. && cd .."
+alias ....="cd .. && cd .. && cd .."
+alias v="vim"
+alias v.="vim ."
 
    #  Exports
 export gh="https://github.com/"

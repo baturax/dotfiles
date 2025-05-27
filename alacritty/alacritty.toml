@@ -3,22 +3,21 @@ live_config_reload = true
 
 [window]
 decorations = "None"
-dynamic_padding = true
+dynamic_padding = false
 dynamic_title = true
-opacity = 0.9
 startup_mode = "Windowed"
 resize_increments = false
-padding = { x = 20, y = 20 }
+padding = { x = 10, y = 10 }
 
 [font]
-normal = { family = "monospace_font", style = "Regular" }
-bold = { family = "monospace_font", style = "Bold" }
-italic = { family = "monospace_font", style = "Italic" }
-bold_italic = { family = "monospace", style = "Bold Italic" }
+normal = { family = "FantasqueSansMNerdFont", style = "Regular" }
+bold = { family = "FantasqueSansMNerdFont", style = "Bold" }
+italic = { family = "FantasqueSansMNerdFont", style = "Italic" }
+bold_italic = { family = "FantasqueSansMNerdFont", style = "Bold Italic" }
 size = 11
 
 [colors]
-transparent_background_colors = false
+transparent_background_colors = true
 cursor = { cursor = "CellForeground", text = "CellBackground" }
 primary = { background = '0x0c0f0a', foreground = '0xd7d0c7' }
 selection = { background = "CellForeground", text = "CellBackground" }

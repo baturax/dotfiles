@@ -75,6 +75,7 @@ layout {
 spawn-at-startup "mako"
 spawn-at-startup "alacritty"
 spawn-at-startup "baibar"
+spawn-at-startup "baiwallpaper"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -102,23 +103,23 @@ animations {
 window-rule {
         //  ID
     match app-id="floatingcat"
-    match app-id="baiwallpaper"
     match app-id="org.gnome.Notes"
     match app-id="org.gnome.Nautilus"
         //  Title
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title="Bitwarden"
 
     
     open-floating true
 }
 
-    //  opacity
+//  opacity 0.8
 window-rule {
     match app-id="org.gnome.Notes"
-    match app-id="baiwallpaper"
     match app-id="floatingcat"
     match app-id="org.gnome.Nautilus"
     match app-id="com.github.th_ch.youtube_music"
+    match app-id="alacritty"
     
     focus-ring {
         off
@@ -141,8 +142,8 @@ binds {
     Mod+C               { spawn "alacritty"; }
     Mod+Shift+C         { spawn "alacritty" "--class" "floatingcat"; }
 
-    Mod+W               { spawn "firefox"; }
-    Mod+Shift+W         { spawn "chromium"; }
+    Mod+W               { spawn "chromium"; }
+    Mod+Shift+W         { spawn "zen-browser"; }
 
     Mod+D               { spawn "fuzzel"; }
     Mod+E               { spawn "nautilus"; }
@@ -158,8 +159,8 @@ binds {
     Help       		{ spawn "xdg-open" "https://github.com"; }
     XF86Calculator 	{ spawn "mate-calc";}
     
-    XF86AudioPlay 	{ spawn "playerctl" "play"; }
-    XF86AudioStop	{ spawn "playerctl" "pause"; }
+    XF86AudioPlay 	{ spawn "playerctl" "play-pause"; }
+    XF86AudioStop	{ spawn "playerctl" "play-pause"; }
 
     XF86AudioPrev	{ spawn "playerctl" "previous"; }
     XF86AudioNext	{ spawn "playerctl" "next"; }

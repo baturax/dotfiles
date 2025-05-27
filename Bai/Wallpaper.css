@@ -1,0 +1,25 @@
+.weather-label {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.lyrics-label {
+    color: #ffd60a;
+}
+
+.not-everything {
+   background-color: #121212;
+}
+
+.powers {
+   background-color: #121212;
+}
+
+.zazu-label {
+   font-size: 39px;
+}
+
+.cat-label {
+   font-size: 20px;
+}
