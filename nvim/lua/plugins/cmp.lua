@@ -28,6 +28,7 @@ return {
         ts_ls = {},
         html = {},
         rust_analyzer = {},
+        gopls = {},
       }
     },
     config = function()
@@ -41,6 +42,7 @@ return {
       lspconfig['ts_ls'].setup({ capabilities = capabilities })
       lspconfig['html'].setup({ capabilities = capabilities })
       lspconfig['rust_analyzer'].setup({ capabilities = capabilities })
+      lspconfig['gopls'].setup({ capabilities = capabilities })
     end
   }
 }

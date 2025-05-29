@@ -1,15 +1,15 @@
 local map = vim.keymap.set
-local opts = { noremap = true, silent = true }
 
-map({"n", "i"}, "<A-1>", "<Cmd>buffer 1<Cr>")
-map({"n", "i"}, "<A-2>", "<Cmd>buffer 2<Cr>")
-map({"n", "i"}, "<A-3>", "<Cmd>buffer 3<Cr>")
-map({"n", "i"}, "<A-4>", "<Cmd>buffer 4<Cr>")
-map({"n", "i"}, "<A-5>", "<Cmd>buffer 5<Cr>")
-map({"n", "i"}, "<A-6>", "<Cmd>buffer 6<Cr>")
-map({"n", "i"}, "<A-7>", "<Cmd>buffer 7<Cr>")
-map({"n", "i"}, "<A-8>", "<Cmd>buffer 8<Cr>")
-map({"n", "i"}, "<A-9>", "<Cmd>buffer 9<Cr>")
+map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>')
+map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>')
+map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>')
+map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>')
+map('n', '<A-5>', '<Cmd>BufferGoto 5<CR>')
+map('n', '<A-6>', '<Cmd>BufferGoto 6<CR>')
+map('n', '<A-7>', '<Cmd>BufferGoto 7<CR>')
+map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>')
+map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>')
+map('n', '<A-0>', '<Cmd>BufferLast<CR>')
 
 map({"n", "i"}, "<A-w>", "<Cmd>bdelete!<Cr>")
 

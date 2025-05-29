@@ -76,6 +76,7 @@ spawn-at-startup "mako"
 spawn-at-startup "alacritty"
 spawn-at-startup "baibar"
 spawn-at-startup "baiwallpaper"
+spawn-at-startup "alacritty" "-e" "sudo" "pacman" "-Suy"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -87,7 +88,7 @@ environment {
 
 cursor {
     xcursor-theme "Bibata-Modern-Ice"
-    xcursor-size 16
+    xcursor-size 1
 }
 
 overview {
@@ -158,6 +159,9 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "s" "5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "s" "5%-"; }
 
     Help       		{ spawn "xdg-open" "https://github.com"; }
     XF86Calculator 	{ spawn "mate-calc";}

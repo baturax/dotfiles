@@ -31,13 +31,12 @@ return {
   },
 
   {
-    "akinsho/bufferline.nvim",
-    version = "*",
-    dependencies = {"nvim-tree/nvim-web-devicons"},
-    opts = {
-      options = {
-      }
-    }
+    "romgrk/barbar.nvim",
+    dependencies = {
+      'lewis6991/gitsigns.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+
   }
 
 }
