@@ -29,6 +29,8 @@ return {
         html = {},
         rust_analyzer = {},
         gopls = {},
+        jsonls = {},
+        yamlls = {}
       }
     },
     config = function()
@@ -43,6 +45,9 @@ return {
       lspconfig['html'].setup({ capabilities = capabilities })
       lspconfig['rust_analyzer'].setup({ capabilities = capabilities })
       lspconfig['gopls'].setup({ capabilities = capabilities })
+      lspconfig['jsonls'].setup({ capabilities = capabilities })
+      lspconfig['yamlls'].setup({ capabilities = capabilities })
+
     end
   }
 }

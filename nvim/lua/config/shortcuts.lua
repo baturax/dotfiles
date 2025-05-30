@@ -11,7 +11,7 @@ map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>')
 map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>')
 map('n', '<A-0>', '<Cmd>BufferLast<CR>')
 
-map({"n", "i"}, "<A-w>", "<Cmd>bdelete!<Cr>")
+map({"n", "i"}, "<A-w>", "<Cmd>bp | bd #<Cr>")
 
 map({"n", "i"}, "<A-e>", "<Cmd>Neotree toggle<Cr>")
 map({"n", "i"}, "<A-S-e>", "<Cmd>Yazi<Cr>")
