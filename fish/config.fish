@@ -34,6 +34,7 @@ alias ...="cd .. && cd .."
 alias ....="cd .. && cd .. && cd .."
 alias v="vim"
 alias v.="vim ."
+alias vi="vim ."
 
    #  Exports
 export gh="https://github.com/"
@@ -48,7 +49,7 @@ end
 
    # Fish_Greeting
 function fish_greeting
-    fastfetch -c examples/8.jsonc
+    baifetch
 end
 
 zoxide init fish | source

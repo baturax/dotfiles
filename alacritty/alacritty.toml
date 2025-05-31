@@ -10,11 +10,11 @@ resize_increments = false
 padding = { x = 10, y = 10 }
 
 [font]
-normal = { family = "FantasqueSansMNerdFont", style = "Regular" }
-bold = { family = "FantasqueSansMNerdFont", style = "Bold" }
-italic = { family = "FantasqueSansMNerdFont", style = "Italic" }
-bold_italic = { family = "FantasqueSansMNerdFont", style = "Bold Italic" }
-size = 11
+normal = { family = "CodeNewRomanNerdFont", style = "Regular" }
+bold = { family = "CodeNewRomanNerdFont", style = "Bold" }
+italic = { family = "CodeNewRomanNerdFont", style = "Italic" }
+bold_italic = { family = "CodeNewRomanNerdFont", style = "Bold Italic" }
+size = 11.5
 
 [colors]
 transparent_background_colors = true
