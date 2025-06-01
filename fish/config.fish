@@ -54,3 +54,5 @@ end
 function fish_greeting
     baifetch
 end
+
+set -gx GPG_TTY (tty)

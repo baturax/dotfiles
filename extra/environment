@@ -1,29 +1,7 @@
-#
-# This file is parsed by pam_env module
-#
-# Syntax: simple "KEY=VAL" pairs on separate lines
-#
 LC_ALL=C.UTF-8
 XDG_DATA_HOME=/home/bai/.local/share
 XDG_CONFIG_HOME=/home/bai/.config
 XDG_STATE_HOME=/home/bai/.local/state/
 XDG_CACHE_HOME=/home/bai/.cache
 XDG_BIN_HOME=/home/bai/.local/bin/
-XDG_DOWNLOAD_DIR=/home/bai/Downloads/
-XDG_PICTURES_DIR=/home/bai/Pictures/
-XDG_VIDEOS_DIR=/home/bai/Pictures/Videos/
-CARGO_HOME="$XDG_CACHE_HOME"/cargo
-HISTFILE="$XDG_CACHE_HOME"/bash/history
-export GNUPGHOME="$XDG_CACHE_HOME"/gnupg
-#gpg2 --homedir "$XDG_DATA_HOME"/gnupg
-#
-ADB_VENDOR_KEYS="$XDG_CACHE_HOME"/android/
-ANDROID_USER_HOME="$XDG_CACHE_HOME"/android
-ANDROID_EMULATOR_HOME="$XDG_CACHE_HOME"/android/
-ANDROID_AVD_HOME="$XDG_CACHE_HOME"/android/avd
-GRADLE_USER_HOME=~/.cache/gradle
-GOPATH="$XDG_CACHE_HOME"/go
-GOMODCACHE="$XDG_CACHE_HOME"/go/mod
-NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-RUSTUP_HOME="$XDG_CACHE_HOME"/rustup
-NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+
