@@ -17,17 +17,19 @@ map({"n", "i"}, "<A-e>", "<Cmd>Neotree toggle<Cr>")
 map({"n", "i"}, "<A-S-e>", "<Cmd>Yazi<Cr>")
 
 
-vim.keymap.set({"n", "i"}, '<A-Right>', '<cmd>wincmd l<cr>')
-vim.keymap.set({"n", "i"}, '<A-Left>', '<cmd>wincmd h<cr>')
-vim.keymap.set({"n", "i"}, '<A-Up>', '<cmd>wincmd j<cr>')
-vim.keymap.set({"n", "i"}, '<A-Down>', '<cmd>wincmd k<cr>')
+map({"n", "i"}, '<A-Right>', '<cmd>wincmd l<cr>')
+map({"n", "i"}, '<A-Left>', '<cmd>wincmd h<cr>')
+map({"n", "i"}, '<A-Up>', '<cmd>wincmd j<cr>')
+map({"n", "i"}, '<A-Down>', '<cmd>wincmd k<cr>')
 
-vim.api.nvim_set_keymap('i', '<C-Down>', '<C-E>', { noremap = true, silent = true })
-
-vim.keymap.set({"n", "i"}, "<C-Down>", "<C-e>")
-vim.keymap.set({"n", "i"}, "<C-Up>", "<C-y>")
+map({"n", "i", "t"}, '<A-t>', '<cmd>FloatermToggle<cr>')
+map({"n", "i", "t"}, '<A-q>', '<cmd>FloatermToggle<cr>')
 
 
+map({"n", "i"}, "<C-Down>", "<C-e>")
+map({"n", "i"}, "<C-Up>", "<C-y>")
+
+map('n', ':', '<cmd>FineCmdline<CR>')
 
 neoscroll = require('neoscroll')
 local keymap = {
@@ -37,5 +39,5 @@ local keymap = {
 }
 local modes = { 'n', 'v', 'x' }
 for key, func in pairs(keymap) do
-  vim.keymap.set(modes, key, func)
+  map(modes, key, func)
 end

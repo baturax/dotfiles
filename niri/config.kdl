@@ -86,8 +86,8 @@ environment {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Ice"
-    xcursor-size 1
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 16
 }
 
 overview {
@@ -142,8 +142,8 @@ binds {
     Mod+C               { spawn "alacritty"; }
     Mod+Shift+C         { spawn "alacritty" "--class" "floatingcat"; }
 
-    Mod+W               { spawn "chromium"; }
-    Mod+Shift+W         { spawn "zen-browser"; }
+    Mod+W               { spawn "librewolf" "--no-remote" "-P" "main"; }
+    Mod+Shift+W         { spawn "librewolf" "--no-remote" "-P" "yt-music"; }
 
     Mod+D               { spawn "fuzzel"; }
 

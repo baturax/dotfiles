@@ -6,6 +6,15 @@ return {
     opts = {
       completions = { blink = { enabled = true } },
     }
+  },
+
+  {
+    "VonHeikemen/fine-cmdline.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+  },
+
+  {
+    "voldikss/vim-floaterm"
   }
 
 }

@@ -13,6 +13,7 @@ alias prc="sudo pacman -Rnsc"
 alias prd="sudo pacman -Rdd"
 
    #  Misc
+alias l="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink --group-directories-first -s=Extension"
 alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension"
 alias cat="bat"
 alias mc="meson compile"
@@ -28,13 +29,15 @@ alias m="mkdir -pv"
 alias n="ninja"
 alias ch="chmod +x"
 alias lg="lazygit"
-alias t="touch"
+alias t="tar vxf"
 alias ..="cd .."
 alias ...="cd .. && cd .."
 alias ....="cd .. && cd .. && cd .."
 alias v="vim"
 alias v.="vim ."
 alias vi="vim ."
+alias gr="go run ."
+alias gb="go build ."
 
    #  Exports
 export gh="https://github.com/"
@@ -51,5 +54,3 @@ end
 function fish_greeting
     baifetch
 end
-
-zoxide init fish | source
