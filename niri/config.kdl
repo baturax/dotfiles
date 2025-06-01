@@ -147,8 +147,8 @@ binds {
 
     Mod+D               { spawn "fuzzel"; }
 
-    Mod+E               { spawn "nautilus"; }
-    Mod+Shift+E         { spawn "alacritty" "-e" "yazi"; }
+    Mod+Shift+E         { spawn "nautilus"; }
+    Mod+E               { spawn "kitty" "-e" "yazi"; }
 
     Mod+S               { spawn "bijiben"; }
     Mod+Period          { spawn "bemoji" "-t"; }

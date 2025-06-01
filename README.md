@@ -1,4 +1,4 @@
-WM: Yazi
+WM: Niri
 
 Terminal: Alacritty
 
@@ -10,4 +10,4 @@ Notification: Dunst
 
 Shell: Fish
 
-
+File Manager yazi && nautilus
