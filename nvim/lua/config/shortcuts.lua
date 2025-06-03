@@ -1,43 +1,43 @@
-local map = vim.keymap.set
+map = vim.keymap.set
+n = "n"
+i = "i"
+t = "t"
+ni = {n, i}
+nit = {n, i, t}
 
-map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>')
-map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>')
-map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>')
-map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>')
-map('n', '<A-5>', '<Cmd>BufferGoto 5<CR>')
-map('n', '<A-6>', '<Cmd>BufferGoto 6<CR>')
-map('n', '<A-7>', '<Cmd>BufferGoto 7<CR>')
-map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>')
-map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>')
-map('n', '<A-0>', '<Cmd>BufferLast<CR>')
+--  Fine CmdLine
+--map(n, ":", "<Cmd>FineCmdline<Cr>")
 
-map({"n", "i"}, "<A-w>", "<Cmd>bp | bd #<Cr>")
+--  Float terminal
+map(nit, "<A-q>", "<Cmd>FloatermToggle<Cr>")
 
-map({"n", "i"}, "<A-e>", "<Cmd>Neotree toggle<Cr>")
-map({"n", "i"}, "<A-S-e>", "<Cmd>Yazi<Cr>")
+--  Yazi
+map(nit, "<A-e>", "<Cmd>Yazi<Cr>")
 
+--  Change Buffer
+map(nit, "<A-1>", "<Cmd>BufferGoto 1<Cr>")
+map(nit, "<A-2>", "<Cmd>BufferGoto 2<Cr>")
+map(nit, "<A-3>", "<Cmd>BufferGoto 3<Cr>")
+map(nit, "<A-4>", "<Cmd>BufferGoto 4<Cr>")
+map(nit, "<A-5>", "<Cmd>BufferGoto 5<Cr>")
+map(nit, "<A-6>", "<Cmd>BufferGoto 6<Cr>")
+map(nit, "<A-7>", "<Cmd>BufferGoto 7<Cr>")
+map(nit, "<A-8>", "<Cmd>BufferGoto 8<Cr>")
+map(nit, "<A-9>", "<Cmd>BufferGoto 9<Cr>")
+map(nit, "<A-0>", "<Cmd>BufferLast<Cr>")
 
-map({"n", "i"}, '<A-Right>', '<cmd>wincmd l<cr>')
-map({"n", "i"}, '<A-Left>', '<cmd>wincmd h<cr>')
-map({"n", "i"}, '<A-Up>', '<cmd>wincmd j<cr>')
-map({"n", "i"}, '<A-Down>', '<cmd>wincmd k<cr>')
+--  Close Buffer
+map(nit, "<A-w>", "<Cmd>BufferClose<Cr>")
 
-map({"n", "i", "t"}, '<A-t>', '<cmd>FloatermToggle<cr>')
-map({"n", "i", "t"}, '<A-q>', '<cmd>FloatermToggle<cr>')
-
-
-map({"n", "i"}, "<C-Down>", "<C-e>")
-map({"n", "i"}, "<C-Up>", "<C-y>")
-
-map('n', ':', '<cmd>FineCmdline<CR>')
+--  Scroll
+map(nit, "<C-Down>", "<C-e>")
+map(nit, "<C-Up>", "<C-y>")
 
 neoscroll = require('neoscroll')
 local keymap = {
   ["<C-Up>"] = function() neoscroll.scroll(-0.1, { move_cursor=false; duration = 100 }) end;
   ["<C-Down>"] = function() neoscroll.scroll(0.1, { move_cursor=false; duration = 100 }) end;
-
 }
-local modes = { 'n', 'v', 'x' }
 for key, func in pairs(keymap) do
-  map(modes, key, func)
+  vim.keymap.set(nit, key, func)
 end
