@@ -25,6 +25,7 @@ require("lazy").setup({
       import = "plugins"
     }
   },
+  install = { colorscheme = { "monokai-nightasty" } },
   checker = { enabled = true },
 })
 

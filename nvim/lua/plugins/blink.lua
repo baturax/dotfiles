@@ -19,7 +19,7 @@ return {
     completion = {
       menu = {
         auto_show = true,
-        border = "double"
+        border = "rounded"
       },
 
       list = {
@@ -34,7 +34,7 @@ return {
         auto_show_delay_ms = 100,
 
         window = {
-          border = "double"
+          border = "rounded"
         },
       },
     },
@@ -42,7 +42,7 @@ return {
     signature = {
       enabled = true,
       window = {
-        border = "double"
+        border = "rounded"
       }
     },
 

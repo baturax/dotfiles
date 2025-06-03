@@ -16,6 +16,8 @@ lspe("clangd")
 lspe("pyright")
 lspe("gopls")
 lspe("gomod")
+lspe("html")
+lspe("cssls")
 
 --  Lsp Config
 lspc("lua_ls", {})
@@ -26,9 +28,13 @@ lspc("clangd", {})
 lspc("pyright", {})
 lspc("gopls", {})
 lspc("gomod", {})
+lspc("html", {})
+lspc("cssls", {})
 
 --  Number
 wo.number = true
+
+--  Colorscheme
 
 --  Clipboard
 opt.clipboard:append("unnamedplus")
