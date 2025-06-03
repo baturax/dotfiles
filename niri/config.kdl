@@ -156,6 +156,7 @@ binds {
     Mod+S               { spawn "bijiben"; }
     Mod+Period          { spawn "bemoji" "-t"; }
     Mod+V               { spawn "pavucontrol"; }
+    Mod+idotless        { spawn "better-control"; }
     Mod+Z               { spawn "alacritty" "--class" "turengtranslate" "-e" "baitranslate"; }
     
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }

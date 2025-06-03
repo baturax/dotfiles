@@ -33,6 +33,10 @@ map(nit, "<A-w>", "<Cmd>BufferClose<Cr>")
 map(nit, "<C-Down>", "<C-e>")
 map(nit, "<C-Up>", "<C-y>")
 
+--  Delete
+map(ni, "<C-Del>", "<Esc>dei")
+map(ni, "<C-BS>", "<Esc>dBi")
+
 neoscroll = require('neoscroll')
 local keymap = {
   ["<C-Up>"] = function() neoscroll.scroll(-0.1, { move_cursor=false; duration = 100 }) end;
