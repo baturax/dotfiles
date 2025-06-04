@@ -18,6 +18,8 @@ lspe("gopls")
 lspe("gomod")
 lspe("html")
 lspe("cssls")
+lspe("vala_ls")
+lspe("ts_ls")
 
 --  Lsp Config
 lspc("lua_ls", {})
@@ -30,7 +32,8 @@ lspc("gopls", {})
 lspc("gomod", {})
 lspc("html", {})
 lspc("cssls", {})
-
+lspc("vala_ls", {})
+lspc("ts_ls", {})
 --  Number
 wo.number = true
 
