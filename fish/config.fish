@@ -20,7 +20,7 @@ alias mc="meson compile"
 alias man="batman"
 alias df="duf"
 alias c="printf '\033[2J\033[3J\033[1;1H'"
-alias c_history="rm $HOME/.local/share/fish/fish_history"
+alias c_history="vim $HOME/.local/share/fish/fish_history"
 
    #  Shortcut
 alias free="free -h"
@@ -38,6 +38,7 @@ alias v.="vim ."
 alias vi="vim ."
 alias gr="go run ."
 alias gb="go build ."
+alias to="touch "
 
    #  Exports
 export gh="https://github.com/"
@@ -56,3 +57,7 @@ function fish_greeting
 end
 
 set -gx GPG_TTY (tty)
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

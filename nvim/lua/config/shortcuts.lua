@@ -5,14 +5,23 @@ t = "t"
 ni = {n, i}
 nit = {n, i, t}
 
+--  Change Tabs
+map(nit, '<A-Right>', '<cmd>wincmd l<cr>')
+map(nit, '<A-Left>', '<cmd>wincmd h<cr>')
+map(nit, '<A-Up>', '<cmd>wincmd k<cr>')
+map(nit, '<A-Down>', '<cmd>wincmd j<cr>')
+
 --  Fine CmdLine
---map(n, ":", "<Cmd>FineCmdline<Cr>")
+map(n, ":", "<Cmd>FineCmdline<Cr>")
 
 --  Float terminal
 map(nit, "<A-q>", "<Cmd>FloatermToggle<Cr>")
 
+-- Neo-Tree
+map(nit, "<A-e>", "<Cmd>Neotree toggle<Cr>")
+
 --  Yazi
-map(nit, "<A-e>", "<Cmd>Yazi<Cr>")
+map(nit, "<A-S-e>", "<Cmd>Yazi<Cr>")
 
 --  Change Buffer
 map(nit, "<A-1>", "<Cmd>BufferGoto 1<Cr>")
@@ -34,8 +43,8 @@ map(nit, "<C-Down>", "<C-e>")
 map(nit, "<C-Up>", "<C-y>")
 
 --  Delete
-map(ni, "<C-Del>", "<Esc>dei")
-map(ni, "<C-BS>", "<Esc>dBi")
+map(ni, "<C-Del>", "<Esc>dw")
+map(ni, "<C-BS>", "<C-w>")
 
 neoscroll = require('neoscroll')
 local keymap = {
@@ -43,5 +52,5 @@ local keymap = {
   ["<C-Down>"] = function() neoscroll.scroll(0.1, { move_cursor=false; duration = 100 }) end;
 }
 for key, func in pairs(keymap) do
-  vim.keymap.set(nit, key, func)
+  map(nit, key, func)
 end

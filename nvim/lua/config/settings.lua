@@ -34,6 +34,7 @@ lspc("html", {})
 lspc("cssls", {})
 lspc("vala_ls", {})
 lspc("ts_ls", {})
+
 --  Number
 wo.number = true
 
