@@ -12,7 +12,6 @@ map(nit, '<A-Up>', '<cmd>wincmd k<cr>')
 map(nit, '<A-Down>', '<cmd>wincmd j<cr>')
 
 --  Fine CmdLine
-map(n, ":", "<Cmd>FineCmdline<Cr>")
 
 --  Float terminal
 map(nit, "<A-q>", "<Cmd>FloatermToggle<Cr>")
