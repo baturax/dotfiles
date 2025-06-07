@@ -18,7 +18,7 @@ map(n, ":", "<Cmd>FineCmdline<Cr>")
 map(nit, "<A-q>", "<Cmd>FloatermToggle<Cr>")
 
 -- Neo-Tree
-map(nit, "<A-e>", "<Cmd>Neotree toggle<Cr>")
+map(nit, "<A-e>", "<Cmd>Yazi<Cr>")
 
 --  Yazi
 map(nit, "<A-S-e>", "<Cmd>Yazi<Cr>")
