@@ -72,10 +72,11 @@ layout {
     }
 }
 
-spawn-at-startup "mako"
+spawn-at-startup "dunst"
 spawn-at-startup "baibar"
 spawn-at-startup "baiwallpaper"
-spawn-at-startup "alacritty" "-e" "sudo" "pacman" "-Suy"
+spawn-at-startup "brightnessctl" "set" "100%"
+spawn-at-startup "pipewire"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -86,7 +87,7 @@ environment {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-theme "Bibata-Modern-Jaroo"
     xcursor-size 16
 }
 

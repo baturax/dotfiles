@@ -40,8 +40,13 @@ alias gr="go run ."
 alias gb="go build ."
 alias to="touch "
 
+function f
+  su -c "$argv"
+end
+
    #  Exports
 export gh="https://github.com/"
+export XDG_RUNTIME_DIR="/tmp"
 
    #  Functions
 
@@ -58,6 +63,10 @@ end
 
 set -gx GPG_TTY (tty)
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+function prepend_f
+    set -l cmd (commandline)
+    commandline -r "f $cmd"
+end
+
+bind \es prepend_f
+
