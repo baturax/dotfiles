@@ -15,12 +15,12 @@ alias prd="sudo pacman -Rdd"
    #  Misc
 alias l="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink --group-directories-first -s=Extension"
 alias ls="eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension"
-alias cat="bat"
+#alias cat="bat"
 alias mc="meson compile"
-alias man="batman"
+#alias man="batman"
 alias df="duf"
 alias c="printf '\033[2J\033[3J\033[1;1H'"
-alias c_history="vim $HOME/.local/share/fish/fish_history"
+alias c_history="nvim $HOME/.local/share/fish/fish_history"
 
    #  Shortcut
 alias free="free -h"
@@ -33,9 +33,10 @@ alias t="tar vxf"
 alias ..="cd .."
 alias ...="cd .. && cd .."
 alias ....="cd .. && cd .. && cd .."
-alias v="vim"
-alias v.="vim ."
-alias vi="vim ."
+alias v="nvim"
+alias v.="nvim ."
+alias vim="nvim"
+alias vi="nvim ."
 alias gr="go run ."
 alias gb="go build ."
 alias to="touch "
@@ -46,7 +47,6 @@ end
 
    #  Exports
 export gh="https://github.com/"
-export XDG_RUNTIME_DIR="/tmp"
 
    #  Functions
 
@@ -62,11 +62,3 @@ function fish_greeting
 end
 
 set -gx GPG_TTY (tty)
-
-function prepend_f
-    set -l cmd (commandline)
-    commandline -r "f $cmd"
-end
-
-bind \es prepend_f
-

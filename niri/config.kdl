@@ -76,7 +76,6 @@ spawn-at-startup "dunst"
 spawn-at-startup "baibar"
 spawn-at-startup "baiwallpaper"
 spawn-at-startup "brightnessctl" "set" "100%"
-spawn-at-startup "pipewire"
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
