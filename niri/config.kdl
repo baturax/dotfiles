@@ -86,8 +86,8 @@ environment {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Jaroo"
-    xcursor-size 16
+    xcursor-theme "Apple-cursors"
+    xcursor-size 15
 }
 
 overview {
@@ -121,7 +121,6 @@ window-rule {
     match app-id="floatingcat"
     match app-id="org.gnome.Nautilus"
     match app-id="com.github.th_ch.youtube_music"
-    match app-id="alacritty"
     match app-id="turengtranslate"
     
     focus-ring {
@@ -142,8 +141,8 @@ window-rule {
 binds {
     Mod+Shift+asterisk { show-hotkey-overlay; }
 
-    Mod+C               { spawn "alacritty"; }
-    Mod+Shift+C         { spawn "alacritty" "--class" "floatingcat"; }
+    Mod+C               { spawn "foot"; }
+    Mod+Shift+C         { spawn "foot" "--class" "floatingcat"; }
 
     Mod+W               { spawn "librewolf" "--no-remote" "-P" "main"; }
     Mod+Shift+W         { spawn "librewolf" "--no-remote" "-P" "yt-music"; }
@@ -151,13 +150,13 @@ binds {
     Mod+D               { spawn "fuzzel"; }
 
     Mod+Shift+E         { spawn "nautilus"; }
-    Mod+E               { spawn "kitty" "-e" "yazi"; }
+    Mod+E               { spawn "foot" "-e" "yazi"; }
 
     Mod+S               { spawn "bijiben"; }
     Mod+Period          { spawn "bemoji" "-t"; }
     Mod+V               { spawn "pavucontrol"; }
     Mod+idotless        { spawn "better-control"; }
-    Mod+Z               { spawn "alacritty" "--class" "turengtranslate" "-e" "baitranslate"; }
+    Mod+Z               { spawn "foot" "--class" "turengtranslate" "-e" "baitranslate"; }
     
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
