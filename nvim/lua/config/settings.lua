@@ -38,7 +38,8 @@ lspc("ts_ls", {})
 --  Number
 wo.number = true
 
---  Colorscheme
+--  cursorline
+o.cursorline = true
 
 --  Clipboard
 opt.clipboard:append("unnamedplus")
