@@ -152,7 +152,7 @@ binds {
     Mod+Shift+E         { spawn "nautilus"; }
     Mod+E               { spawn "foot" "-e" "yazi"; }
 
-    Mod+S               { spawn "bijiben"; }
+    Mod+S               { spawn "iotas"; }
     Mod+Period          { spawn "bemoji" "-t"; }
     Mod+V               { spawn "pavucontrol"; }
     Mod+idotless        { spawn "better-control"; }
