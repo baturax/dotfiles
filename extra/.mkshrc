@@ -1,0 +1,64 @@
+#!/bin/sh
+
+a="alias"
+s="sudo"
+
+$a c="clear"
+$a v="nvim"
+$a m="mkdir -pv"
+$a t="tar -vxf"
+$a ch="chmod -v +x"
+$a lg="lazygit"
+$a p="ping google.com"
+$a acpi="echo '$(cat /sys/class/power_supply/BAT0/capacity)  $(cat /sys/class/power_supply/BAT0/status)'"
+$a cp="cp -v"
+$a mv="mv -v"
+$a w="wcurl"
+$a cl="clear && $(which ls) --color=always"
+$a cls="clear && ls"
+$a cpwd="clear && pwd"
+$a diff="diff --color"
+$a d="diff"
+
+$a n="ninja"
+$a to="touch"
+$a tree="tree -C"
+
+$a pi="$s pacman -S --needed"
+$a pr="$s pacman -R"
+$a prc="$s pacman -Rcs"
+$a prd="$s pacman -Rdd"
+$a pis="pacman -Ss"
+$a pu="$s pacman -Suy"
+
+$a gclone="git clone --verbose"
+$a gcloner="git clone --verbose --recursive"
+$a gclone1="git clone --depth 1 --verbose"
+$a gpush="git push --verbose "
+$a gpull="git pull --verbose"
+
+$a ..="cd .."
+$a ...="cd .. && cd .."
+
+$a gb="go build"
+$a gr="go run"
+
+$a l="$(which ls) --color=always"
+$a ls="ls -A --color=always"
+
+fuck() {
+  su -c "$*"
+}
+
+gofetch
+#github-notifications
+acpi
+date
+
+..() {
+	cd ..
+}
+
+bind ^H=delete-word-backward
+
+# vim: set filetype=sh :
