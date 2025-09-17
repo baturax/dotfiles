@@ -8,6 +8,11 @@ alias gcommit="git commit"
 
 alias c="clear"
 alias lg="lazygit"
+alias m="mkdir -pv"
+alias rm="rm -v"
+alias mv="mv -v"
+alias ta="tar -vxf"
+alias t="touch"
 
 alias pi="pacman -S"
 alias pr="pacman -R"
