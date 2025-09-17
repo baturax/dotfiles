@@ -1,0 +1,2 @@
+# dotfiles
+Dotfiles for niri 󰙊 
