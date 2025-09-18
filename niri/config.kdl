@@ -5,7 +5,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
 	QT_QPA_PLATFORM "wayland"
-	GTK_THEME "Adwaita"
+	GTK_THEME "Adwaita:dark"
 }
 
 cursor {
@@ -124,9 +124,12 @@ binds {
 
 		Mod+W hotkey-overlay-title="Run browser: Firefox" { spawn "firefox"; }
 
-		Mod+Period hotkey-overlay-title="Run Emoji Selector: bemoji" { spawn "bemoji" "-t"; }
+		Mod+E hotkey-overlay-title="Run Terminal File Manager: Yazi" { spawn-sh "foot yazi"; }
+		Mod+Shift+E hotkey-overlay-title="Run File Manager: Nautilus" { spawn-sh "foot nautilus"; }
 
-		Mod+V hotkey-overlay-title="Run volume control: alsamixer" { spawn-sh "foot alsamixer"; }
+		Mod+Period hotkey-overlay-title="Run Emoji Selector: Bemoji" { spawn "bemoji" "-t"; }
+
+		Mod+V hotkey-overlay-title="Run volume control: Alsamixer" { spawn-sh "foot alsamixer"; }
 		Mod+Z { spawn-sh "foot tureng-console"; }
 
 		XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
@@ -220,7 +223,7 @@ binds {
 
 		Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-		Mod+Shift+E { quit; }
+		Mod+Shift+Q { quit; }
 		Ctrl+Alt+Delete { quit; }
 
 		Mod+Shift+P { power-off-monitors; }
