@@ -1,5 +1,7 @@
 # Dotfiles for niri
 
+<img src="assets/img.png"/>
+
 WM: [niri](https://github.com/YaLTeR/niri)
 
 Terminal: [Foot](https://codeberg.org/dnkl/foot)
