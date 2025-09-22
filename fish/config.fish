@@ -1,5 +1,3 @@
-# bai
-
 set s sudo
 
 alias gclone="git clone"
@@ -9,6 +7,8 @@ alias gpush="git push"
 alias gcommit="git commit"
 alias gpull="git pull"
 
+alias config_fish="nvim $HOME/.config/fish/config.fish"
+
 alias c="clear"
 alias lg="lazygit"
 alias m="mkdir -pv"
@@ -16,6 +16,9 @@ alias rm="rm -v"
 alias mv="mv -v"
 alias ta="tar -vxf"
 alias t="touch"
+alias cl="clear && l --color=always"
+alias cls="clear && ls --color=always -A"
+
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
