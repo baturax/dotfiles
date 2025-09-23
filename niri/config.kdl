@@ -6,6 +6,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 environment {
 	QT_QPA_PLATFORM "wayland"
 	QT_FONT_DPI "130"
+	GTK_THEME "Adwaita:dark"
 }
 
 cursor {
