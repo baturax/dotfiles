@@ -9,6 +9,9 @@ alias gpull="git pull"
 
 alias config_fish="nvim $HOME/.config/fish/config.fish"
 
+alias ..="cd .."
+alias ...="cd .. && cd .."
+
 alias c="clear"
 alias lg="lazygit"
 alias m="mkdir -pv"
