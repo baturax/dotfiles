@@ -131,6 +131,7 @@ binds {
 
 		Mod+V hotkey-overlay-title="Run volume control: Alsamixer" { spawn-sh "foot alsamixer"; }
 		Mod+Z { spawn-sh "foot tureng-console"; }
+		Mod+S { spawn "iotas"; }
 
 		XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
 		XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
