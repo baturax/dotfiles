@@ -1,20 +1,23 @@
-spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/vestrahorn.jpg"
+spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
+spawn-at-startup "pipewire"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
 	QT_QPA_PLATFORM "wayland"
-	QT_FONT_DPI "130"
-	GTK_THEME "Adwaita:dark"
+	QT_FONT_DPI "110"
+	GTK_THEME "Fluent-pink-Dark-compact"
+	ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 cursor {
+	xcursor-theme "Adwaita"
 	xcursor-size 16
 }
 
 overview {
-	zoom 0.4
+	zoom 0.54
 }
 
 xwayland-satellite {
