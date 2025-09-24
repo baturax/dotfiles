@@ -29,11 +29,11 @@ alias vim="nvim"
 alias gr="go run ."
 alias gb="go build ."
 
-alias pi="$s pacman -S --needed"
-alias pu="$s pacman -Suyyuyuyy"
-alias pr="$s pacman -R"
-alias prc="$s pacman -Rcs"
-alias prd="$s pacman -Rdd"
+alias pi="$s xbps-install"
+alias pu="$s xbps-install -Su"
+alias pr="$s xbps-remove"
+alias prc="$s xbps-remove -R"
+alias prd="$s xbps-remove -RFf"
 
 function l
 	command ls --color=always $argv
