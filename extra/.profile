@@ -1,6 +1,6 @@
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/bai/.local/bin"
-export PATH="$PATH:/home/bai/.node/bin/"
 export PATH="$PATH:/home/bai/.java/jetbrains-21/bin"
+export PATH="$PATH:/home/bai/.node/bin"
 
 export XDG_DATA_HOME=/home/bai/.local/share
 export XDG_CONFIG_HOME=/home/bai/.config
@@ -18,6 +18,9 @@ fi
 export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export GOBIN="$XDG_BIN_HOME/"
+
+export BUN_INSTALL="$HOME/.bun/"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 export QT_FONT_DPI=96
 export QT_QPA_PLATFORM="wayland"
@@ -38,3 +41,5 @@ export GPG_TTY=$tty
 export MAKEFLAGS="-j8"
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="-O3 -pipe -march=native"
+
+dbus-run-session niri --session
