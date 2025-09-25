@@ -1,6 +1,8 @@
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/bai/.local/bin"
 export PATH="$PATH:/home/bai/.java/jetbrains-21/bin"
 export PATH="$PATH:/home/bai/.node/bin"
+export PATH="$PATH:/home/bai/.cargo/bin"
+export PATH="$PATH:/home/bai/.local/share/bob/nvim-bin"
 
 export XDG_DATA_HOME=/home/bai/.local/share
 export XDG_CONFIG_HOME=/home/bai/.config
