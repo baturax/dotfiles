@@ -35,6 +35,8 @@ export HISTFILE=$XDG_CACHE_HOME/shellhistory
 export https="https:/"
 export gh="$https/github.com"
 
+export GPG_TTY=$(tty)
+
 export MANPAGER="nvim +Man!"
 
 tty=$(tty)
