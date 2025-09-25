@@ -1,3 +1,10 @@
+window-rule {
+    match title="Open Folder"
+
+    open-floating true
+}
+
+
 spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpapers/wp.jpg"
 spawn-at-startup "pipewire"
 
