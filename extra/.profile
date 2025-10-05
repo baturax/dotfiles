@@ -21,8 +21,8 @@ export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export GOBIN="$XDG_BIN_HOME/"
 
-#export BUN_INSTALL="$HOME/.bun/"
-#export PATH="$BUN_INSTALL/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun/"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 export QT_FONT_DPI=96
 export QT_QPA_PLATFORM="wayland"
