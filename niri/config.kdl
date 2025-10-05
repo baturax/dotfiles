@@ -4,9 +4,12 @@ window-rule {
     open-floating true
 }
 
+layer-rule {
+    match namespace="^wallpaper$"
+}
 
-spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpapers/wp.jpg"
-spawn-at-startup "pipewire"
+spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -14,13 +17,13 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 environment {
 	QT_QPA_PLATFORM "wayland"
 	QT_FONT_DPI "110"
-	GTK_THEME "Fluent-round-pink-Dark-compact"
+	// GTK_THEME "Fluent-round-pink-Dark-compact"
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
 cursor {
 	xcursor-theme "bai"
-	xcursor-size 16
+	xcursor-size 20
 }
 
 overview {
@@ -45,7 +48,7 @@ input {
 		}
 
 		touchpad {
-				off
+			//	off
 				tap
 				dwt
 				drag true
@@ -127,7 +130,6 @@ animations {
 }
 
 binds {
-
 		Mod+Shift+Asterisk { show-hotkey-overlay; }
 
 		Mod+C hotkey-overlay-title="Open Terminal: Foot" { spawn "foot"; }
@@ -136,7 +138,7 @@ binds {
 		Mod+W hotkey-overlay-title="Run browser: Firefox" { spawn "firefox"; }
 
 		Mod+E hotkey-overlay-title="Run Terminal File Manager: Yazi" { spawn-sh "foot yazi"; }
-		Mod+Shift+E hotkey-overlay-title="Run File Manager: Nautilus" { spawn "nautilus"; }
+		Mod+Shift+E hotkey-overlay-title="Run File Manager: Thunar" { spawn "thunar"; }
 
 		Mod+Period hotkey-overlay-title="Run Emoji Selector: Bemoji" { spawn "bemoji" "-t"; }
 
@@ -206,6 +208,12 @@ binds {
 		Mod+Shift+7 { move-column-to-workspace 7; }
 		Mod+Shift+8 { move-column-to-workspace 8; }
 		Mod+Shift+9 { move-column-to-workspace 9; }
+
+		Mod+Alt+Left { focus-monitor-left; }
+		Mod+Alt+Right { focus-monitor-right; }
+
+		Mod+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Ctrl+Right  { move-column-to-monitor-right; }
 
 		Mod+Tab { focus-workspace-previous; }
 
