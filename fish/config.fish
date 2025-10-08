@@ -21,6 +21,7 @@ alias ta="tar -vxf"
 alias t="touch"
 alias cl="clear && l --color=always"
 alias cls="clear && ls --color=always -A"
+alias d="date"
 
 alias v="nvim"
 alias vi="nvim"
