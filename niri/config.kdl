@@ -4,11 +4,26 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+	match app-id="com.github.th_ch.youtube_music"
+	
+	opacity 0.7
+	draw-border-with-background false
+
+}
 layer-rule {
+    // This is for swaybg; change for other wallpaper tools.
+    // Find the right namespace by running niri msg layers.
     match namespace="^wallpaper$"
+    place-within-backdrop true
 }
 
+// Set transparent workspace background color.
+
+// Optionally, disable the workspace shadows in the overview.
+
 spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
+spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/wp.jpg"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 prefer-no-csd
@@ -48,7 +63,7 @@ input {
 		}
 
 		touchpad {
-			//	off
+				off
 				tap
 				dwt
 				drag true
@@ -146,6 +161,7 @@ binds {
 		Mod+Z { spawn-sh "foot tureng-console"; }
 		Mod+X { spawn-sh "foot deepl-in-console"; }
 		Mod+S { spawn "iotas"; }
+		Mod+I { spawn "hyprpicker" "-an"; }
 
 		XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
 		XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
