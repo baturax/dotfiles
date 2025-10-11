@@ -30,11 +30,11 @@ alias vim="nvim"
 alias gr="go run ."
 alias gb="go build ."
 
-alias pi="$s pacman -S --needed"
-alias pu="$s pacman -Suyy"
-alias pr="$s pacman -R"
-alias prc="$s pacman -Rsc"
-alias prd="$s pacman -Rdd"
+alias pi="$s dnf install"
+alias pu="$s dnf upgrade"
+alias pr="$s dnf remove"
+alias prc="$s dnf remove -y"
+#alias prd="$s dnf -Rdd"
 
 function l
 	command ls --color=always $argv
@@ -45,5 +45,5 @@ function ls
 end
 
 function fish_greeting
-    gofetch
+	fastfetch -c examples/8.jsonc
 end
