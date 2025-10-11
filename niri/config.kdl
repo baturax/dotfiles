@@ -18,21 +18,18 @@ layer-rule {
     place-within-backdrop true
 }
 
-// Set transparent workspace background color.
-
-// Optionally, disable the workspace shadows in the overview.
-
 spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
 spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/wp.jpg"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "fnott"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
 	QT_QPA_PLATFORM "wayland"
-	QT_FONT_DPI "110"
-	// GTK_THEME "Fluent-round-pink-Dark-compact"
+	QT_FONT_DPI "100"
+	GTK_THEME "Qogir-Manjaro-Round-Dark"
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
@@ -153,7 +150,7 @@ binds {
 		Mod+W hotkey-overlay-title="Run browser: Firefox" { spawn "firefox"; }
 
 		Mod+E hotkey-overlay-title="Run Terminal File Manager: Yazi" { spawn-sh "foot yazi"; }
-		Mod+Shift+E hotkey-overlay-title="Run File Manager: Thunar" { spawn "thunar"; }
+		Mod+Shift+E hotkey-overlay-title="Run File Manager: Thunar" { spawn "nautilus"; }
 
 		Mod+Period hotkey-overlay-title="Run Emoji Selector: Bemoji" { spawn "bemoji" "-t"; }
 
