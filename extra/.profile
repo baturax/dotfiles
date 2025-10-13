@@ -24,7 +24,7 @@ export GOBIN="$XDG_BIN_HOME/"
 export BUN_INSTALL="$HOME/.bun/"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export QT_FONT_DPI=96
+#export QT_FONT_DPI=96
 export QT_QPA_PLATFORM="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export QT_QPA_PLATFORMTHEME="qt6ct"
