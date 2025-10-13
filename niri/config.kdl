@@ -22,6 +22,7 @@ spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
 spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/wp.jpg"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
+spawn-at-startup "swayidle"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -159,6 +160,8 @@ binds {
 		Mod+X { spawn-sh "foot deepl-in-console"; }
 		Mod+S { spawn "iotas"; }
 		Mod+I { spawn "hyprpicker" "-an"; }
+
+		Mod+Shift+L { spawn "swaylock"; }
 
 		XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
 		XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
