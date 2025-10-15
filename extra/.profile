@@ -1,14 +1,13 @@
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/bai/.local/bin"
-#export PATH="$PATH:/home/bai/.java/jetbrains-21/bin"
-# export PATH="$PATH:/home/bai/.node/bin"
-# export PATH="$PATH:/home/bai/.cargo/bin"
-# export PATH="$PATH:/home/bai/.local/share/bob/nvim-bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.local/bin"
+#export PATH="$PATH:$HOME/.node/bin"
+#export PATH="$PATH:$HOME/.cargo/bin"
+#export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 
-export XDG_DATA_HOME=/home/bai/.local/share
-export XDG_CONFIG_HOME=/home/bai/.config
-export XDG_STATE_HOME=/home/bai/.local/state/
-export XDG_CACHE_HOME=/home/bai/.cache
-export XDG_BIN_HOME=/home/bai/.local/bin/
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_STATE_HOME=$HOME/.local/state/
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_BIN_HOME=$HOME/.local/bin/
 
 # if [ -z "$XDG_RUNTIME_DIR" ]; then
 # 	XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
@@ -24,12 +23,13 @@ export GOBIN="$XDG_BIN_HOME/"
 export BUN_INSTALL="$HOME/.bun/"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export JAVA_HOME="$XDG_DATA_HOME"/java/jetbrains-21
+export PATH="$JAVA_HOME/bin:$PATH"
+
 #export QT_FONT_DPI=96
 export QT_QPA_PLATFORM="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export QT_QPA_PLATFORMTHEME="qt6ct"
-
-# export JAVA_HOME=/home/bai/.java/jetbrains-21
 
 export HISTFILE=$XDG_CACHE_HOME/shellhistory
 export https="https:/"
