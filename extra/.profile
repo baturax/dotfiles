@@ -26,10 +26,16 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export JAVA_HOME="$XDG_DATA_HOME"/java/jetbrains-21
 export PATH="$JAVA_HOME/bin:$PATH"
 
-#export QT_FONT_DPI=96
+export QT_FONT_DPI=99
 export QT_QPA_PLATFORM="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export QT_QPA_PLATFORMTHEME="qt6ct"
+
+export GTK_THEME="Qogir-Manjaro-Dark"
+export ELECTRON_OZONE_PLATFORM_HINT="wayland"
+
+export XCURSOR_SIZE=20
+export XCURSOR_THEME="bai"
 
 export HISTFILE=$XDG_CACHE_HOME/shellhistory
 export https="https:/"

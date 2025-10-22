@@ -1,3 +1,10 @@
+workspace "browser"
+workspace "code"
+workspace "game"
+workspace "music"
+workspace "fifth"
+workspace "extra"
+
 window-rule {
     match title="Open Folder"
 
@@ -12,8 +19,6 @@ window-rule {
 
 }
 layer-rule {
-    // This is for swaybg; change for other wallpaper tools.
-    // Find the right namespace by running niri msg layers.
     match namespace="^wallpaper$"
     place-within-backdrop true
 }
@@ -30,7 +35,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 environment {
 	QT_QPA_PLATFORM "wayland"
 	QT_FONT_DPI "100"
-	GTK_THEME "Qogir-Manjaro-Round-Dark"
+	GTK_THEME "Qogir-Manjaro-Dark"
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
@@ -58,6 +63,7 @@ input {
 				}
 				repeat-delay 300
 				repeat-rate 30
+				numlock
 		}
 
 		touchpad {
@@ -73,7 +79,6 @@ input {
 
 		focus-follows-mouse max-scroll-amount="0%"
 		workspace-auto-back-and-forth
-
 }
 
 output "eDP-1" {
@@ -87,7 +92,7 @@ output "eDP-1" {
 }
 
 layout {
-		gaps 10
+		gaps 4
 		center-focused-column "never" // always // on-overflow // never
 		always-center-single-column
 
@@ -110,7 +115,7 @@ layout {
 		}
 
 		focus-ring {
-				width 2
+				width 1
 				active-gradient from="#f5f5dc" to="#c7ff7f" angle=45
 		}
 
@@ -159,7 +164,8 @@ binds {
 		Mod+Z { spawn-sh "foot tureng-console"; }
 		Mod+X { spawn-sh "foot deepl-in-console"; }
 		Mod+S { spawn "iotas"; }
-		Mod+I { spawn "hyprpicker" "-an"; }
+		Mod+I { spawn-sh "niri msg pick-color | sed -n 's/^Hex: //p' | wl-copy
+"; }
 
 		Mod+Shift+L { spawn "swaylock"; }
 
