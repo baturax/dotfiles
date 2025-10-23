@@ -23,8 +23,8 @@ layer-rule {
     place-within-backdrop true
 }
 
-spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
-spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/wp.jpg"
+// spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
+// spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/wp.jpg"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
 spawn-at-startup "swayidle"

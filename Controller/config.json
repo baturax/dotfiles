@@ -1,4 +1,5 @@
 {
 	"ip": "192.168.1.180",
-	"port": "31311"
+	"port": "31311",
+	"customdir": "/home/bai/.local/share/controller-website" 
 }
