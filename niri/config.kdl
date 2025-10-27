@@ -23,26 +23,26 @@ layer-rule {
     place-within-backdrop true
 }
 
-// spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/wp.jpg"
-// spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpaper/wp.jpg"
-spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+cursor {
+	xcursor-theme "Adwaita"
+	xcursor-size 16
+}
+
+environment {
+	GTK_THEME "Qogir-Ubuntu-Dark"
+}
+
+spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
 spawn-at-startup "swayidle"
+spawn-at-startup "pipewire"
+spawn-at-startup "/usr/libexec/xdg-desktop-portal-gnome"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-environment {
-	QT_QPA_PLATFORM "wayland"
-	QT_FONT_DPI "100"
-	GTK_THEME "Qogir-Manjaro-Dark"
-	ELECTRON_OZONE_PLATFORM_HINT "auto"
-}
-
-cursor {
-	xcursor-theme "bai"
-	xcursor-size 20
-}
+//environment {
+//}
 
 overview {
 	zoom 0.54

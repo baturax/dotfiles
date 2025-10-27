@@ -31,11 +31,11 @@ alias vim="nvim"
 alias gr="go run -v ."
 alias gb="go build -v ."
 
-alias pi="$s dnf install -y"
-alias pu="$s dnf upgrade --refresh"
-alias pr="$s dnf remove"
-alias prc="$s dnf remove -y"
-#alias prd="$s dnf -Rdd"
+alias pi="$s xbps-install"
+alias pu="$s xbps-install -Su"
+alias pr="$s xbps-remove"
+alias prc="$s xbps-remove -R"
+alias prd="$s xbps-remove -RFf"
 
 function ta
     if string match -q '*.zip' $argv
