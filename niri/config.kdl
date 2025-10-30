@@ -5,8 +5,10 @@ workspace "music"
 workspace "fifth"
 workspace "extra"
 
+// float
 window-rule {
     match title="Open Folder"
+    match app-id="bai.sinver"
 
     open-floating true
 }
@@ -18,10 +20,11 @@ window-rule {
 	draw-border-with-background false
 
 }
-layer-rule {
+/*layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
 }
+*/
 
 cursor {
 	xcursor-theme "Adwaita"
@@ -29,9 +32,10 @@ cursor {
 }
 
 environment {
-	GTK_THEME "Qogir-Ubuntu-Dark"
+	GTK_THEME "Orchis-Purple-Dark-Compact"
 }
 
+spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpaper/ninjago.jpeg"
 spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
 spawn-at-startup "swayidle"

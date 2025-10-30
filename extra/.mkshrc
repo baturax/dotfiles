@@ -50,7 +50,6 @@ fuck() {
   su -c "$*"
 }
 
-gofetch
 #github-notifications
 acpi
 date
