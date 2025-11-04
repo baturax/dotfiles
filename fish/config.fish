@@ -23,12 +23,15 @@ alias cls="clear && ls --color=always -A"
 alias d="date"
 alias ch="chmod +x"
 alias bunx="bun x"
+alias sudo="sudo -E"
+alias clear_history="vim .local/share/fish/fish_history"
+alias nano="nvim"
 
 alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 
-alias gr="go run -v ."
+alias gr="go run ."
 alias gb="go build -v ."
 
 alias pi="$s xbps-install"
@@ -56,3 +59,5 @@ end
 function fish_greeting
 	fastfetch -c examples/8.jsonc
 end
+
+oh-my-posh init fish --config /home/bai/.cache/oh-my-posh/themes/json.omp.json | source

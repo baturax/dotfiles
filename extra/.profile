@@ -27,7 +27,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export JAVA_HOME="$XDG_DATA_HOME"/java/jetbrains-21
 export PATH="$JAVA_HOME/bin:$PATH"
 
-export QT_FONT_DPI=96
+export NODE_PATH=$XDG_CACHE_HOME/node_modules
+
+#export QT_FONT_DPI=96
 export QT_QPA_PLATFORM="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export QT_QPA_PLATFORMTHEME="qt6ct"
@@ -49,3 +51,4 @@ ANDROID_USER_HOME="/home/bai/.local/share/android/tmp"
 export MAKEFLAGS="-j8"
 export CFLAGS="-O3 -pipe -march=native"
 export CXXFLAGS="-O3 -pipe -march=native"
+. "$HOME/.cargo/env"
