@@ -24,7 +24,7 @@ alias d="date"
 alias ch="chmod +x"
 alias bunx="bun x"
 alias sudo="sudo -E"
-alias clear_history="vim .local/share/fish/fish_history"
+alias clear_history="vim ~/.local/share/fish/fish_history"
 alias nano="nvim"
 
 alias v="nvim"

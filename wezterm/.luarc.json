@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "workspace": {
+    "library": [
+      "/home/bai/.local/share/wezterm-types"
+    ]
+  },
+  "diagnostics": {
+    "globals": ["wezterm"]
+  }
+}
+
