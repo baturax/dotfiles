@@ -21,7 +21,12 @@ config.keys = {
   {
     key = "F4",
     action = wezterm.action.ActivateTab(3)
-  }
+  },
+  {
+    key = 'Backspace',
+    mods = 'CTRL',
+    action = wezterm.action.SendKey { key = 'w', mods = 'CTRL' }
+  },
 }
 
 -- color
@@ -31,8 +36,9 @@ config.color_scheme = "Abernathy"
 config.default_cursor_style = "BlinkingBar"
 
 -- fonts
-config.font = wezterm.font("VictorMono Nerd Font Propo")
-config.font_size = 14
+config.font = wezterm.font("Monaspace Radon NF")
+config.font_size = 13
+config.freetype_load_target = "Normal"
 
 -- padding
 config.window_padding = {
@@ -41,7 +47,6 @@ config.window_padding = {
   right = 20,
   top = 20
 }
-
 
 -- disable padding in neovim
 local function update_padding(window, pane)

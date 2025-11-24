@@ -58,6 +58,4 @@ date
 	cd ..
 }
 
-bind ^H=delete-word-backward
-
 # vim: set filetype=sh :

@@ -2,7 +2,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH="$PATH:$HOME/.local/bin"
 #export PATH="$PATH:$HOME/.node/bin"
 #export PATH="$PATH:$HOME/.cargo/bin"
-#export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
@@ -29,6 +28,18 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 export NODE_PATH=$XDG_CACHE_HOME/node_modules
 
+#game
+export PROTON_FSR4_UPGRADE=1
+export PROTON_FSR4_RDNA3_UPGRADE=1
+export PROTON_XESS_UPGRADE=1
+export PROTON_ENABLE_WAYLAND=1
+export PROTON_NO_WM_DECORATION=1
+export PROTON_ENABLE_HDR=1
+export PROTON_USE_NTSYNC=1
+export PROTON_LOCAL_SHADER_CACHE=0
+export ENABLE_LAYER_MESA_ANTI_LAG=1
+export PROTON_NO_STEAMINPUT=1
+
 #export QT_FONT_DPI=96
 export QT_QPA_PLATFORM="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
@@ -50,5 +61,5 @@ ANDROID_USER_HOME="/home/bai/.local/share/android/tmp"
 
 export MAKEFLAGS="-j8"
 export CFLAGS="-O3 -pipe -march=native"
-export CXXFLAGS="-O3 -pipe -march=native"
-. "$HOME/.cargo/env"
+export CFLAGS="-O3 -pipe -march=native"
+RUSTFLAGS="-C target-cpu=native -C opt-level=3 -C codegen-units=1"

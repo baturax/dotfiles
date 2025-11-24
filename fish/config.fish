@@ -24,7 +24,7 @@ alias d="date"
 alias ch="chmod +x"
 alias bunx="bun x"
 alias sudo="sudo -E"
-alias clear_history="vim ~/.local/share/fish/fish_history"
+alias clear_history="echo '' > ~/.local/share/fish/fish_history"
 alias nano="nvim"
 
 alias v="nvim"
@@ -34,11 +34,11 @@ alias vim="nvim"
 alias gr="go run ."
 alias gb="go build -v ."
 
-alias pi="$s xbps-install"
-alias pu="$s xbps-install -Su"
-alias pr="$s xbps-remove"
-alias prc="$s xbps-remove -R"
-alias prd="$s xbps-remove -RFf"
+alias pi="$s pacman -S --needed --assume-installed=ttf-font"
+alias pu="$s pacman -Suuuuuuuuuyyyyyyyyyyyy --assume-installed=ttf-font"
+alias pr="$s pacman -R"
+alias prc="$s pacman -Rcs"
+alias prd="$s pacman -Rdd"
 
 function ta
     if string match -q '*.zip' $argv
@@ -59,5 +59,3 @@ end
 function fish_greeting
 	fastfetch -c examples/8.jsonc
 end
-
-oh-my-posh init fish --config /home/bai/.cache/oh-my-posh/themes/json.omp.json | source
