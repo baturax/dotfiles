@@ -27,18 +27,14 @@ alias sudo="sudo -E"
 alias clear_history="echo '' > ~/.local/share/fish/fish_history"
 alias nano="nvim"
 
-alias v="nvim"
-alias vi="nvim"
-alias vim="nvim"
-
 alias gr="go run ."
 alias gb="go build -v ."
 
-alias pi="$s pacman -S --needed --assume-installed=ttf-font"
-alias pu="$s pacman -Suuuuuuuuuyyyyyyyyyyyy --assume-installed=ttf-font"
-alias pr="$s pacman -R"
-alias prc="$s pacman -Rcs"
-alias prd="$s pacman -Rdd"
+alias pi="$s xbps-install"
+alias pu="$s xbps-install -Su"
+alias pr="$s xbps-remove"
+alias prc="$s xbps-remove -R"
+alias prd="$s xbps-remove -RFf"
 
 function ta
     if string match -q '*.zip' $argv

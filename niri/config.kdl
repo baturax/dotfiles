@@ -22,27 +22,22 @@ window-rule {
   draw-border-with-background false
 
 }
-/*layer-rule {
-    match namespace="^wallpaper$"
-    place-within-backdrop true
-}
-*/
 
 cursor {
   xcursor-theme "future"
-  xcursor-size 16
+  xcursor-size 20
 }
 
 environment {
-  GTK_THEME "Lavanda-Sea-Dark-Compact"
+  GTK_THEME "Otis-forest"
   DISPLAY ":0"
 }
 
-spawn-at-startup "wbg" "-s" "/home/bai/Pictures/Wallpapers/lake.png"
+spawn-at-startup "wbg" "-s" "/home/dusk/Pictures/Wallpapers/moon.jpg"
 spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
 spawn-at-startup "swayidle"
-// spawn-at-startup "pipewire"
+spawn-at-startup "pipewire"
 spawn-at-startup "/usr/libexec/xdg-desktop-portal-gnome"
 
 prefer-no-csd
@@ -71,7 +66,7 @@ input {
     }
 
     touchpad {
-        off
+        //off
         tap
         dwt
         drag true
@@ -169,8 +164,7 @@ binds {
     Mod+Z { spawn-sh "foot -e tureng-console"; }
     Mod+X { spawn-sh "foot -e deepl-in-console"; }
     Mod+S { spawn "iotas"; }
-    Mod+I { spawn-sh "niri msg pick-color | sed -n 's/^Hex: //p' | wl-copy
-"; }
+    Mod+I { spawn-sh "hyprpicker -a -f hex -q"; }
 
     Mod+Shift+L { spawn "swaylock"; }
 
