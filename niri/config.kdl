@@ -16,10 +16,17 @@ window-rule {
   open-floating true
 }
 
+window-rule {
+  geometry-corner-radius 20
+  clip-to-geometry true
+}
+
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/ Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-environment {}
+environment {
+  DISPLAY ":0"
+}
 
 cursor {
   xcursor-theme "future"
@@ -91,8 +98,8 @@ binds {
 
   Mod+I hotkey-overlay-title="Color Picker"                 { spawn-sh "hyprpicker -a -f hex -q"; }
 
-  XF86AudioRaiseVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01+"; }
-  XF86AudioLowerVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.01-"; }
+  XF86AudioRaiseVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
+  XF86AudioLowerVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
   XF86AudioMute allow-when-locked=true              { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
   XF86AudioMicMute allow-when-locked=true           { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
   XF86MonBrightnessUp allow-when-locked=true        { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
@@ -178,7 +185,7 @@ layout {
     proportion 0.8888
   }
   default-column-width {
-    //proportion 0.5;
+    proportion 0.5;
   }
   preset-window-heights {
     proportion 0.33333
