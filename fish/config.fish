@@ -45,11 +45,11 @@ function ta
 end
 
 function l
-	command ls --color=always $argv
+	command eza --color=always --icons=always $argv
 end
 
 function ls
-	command ls --color=always -A $argv
+	command eza --color=always -A --icons=always $argv
 end
 
 function fish_greeting

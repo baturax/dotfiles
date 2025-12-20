@@ -1,7 +1,5 @@
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH="$PATH:$HOME/.local/bin"
-#export PATH="$PATH:$HOME/.node/bin"
-#export PATH="$PATH:$HOME/.cargo/bin"
 
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
@@ -22,11 +20,6 @@ export GOBIN="$XDG_BIN_HOME/"
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-export JAVA_HOME="$XDG_DATA_HOME"/java/jetbrains-21
-export PATH="$JAVA_HOME/bin:$PATH"
-
-export NODE_PATH=$XDG_CACHE_HOME/node_modules
 
 #game
 export PROTON_FSR4_UPGRADE=1

@@ -1,4 +1,4 @@
-spawn-at-startup "wbg" "-s" "/home/dusk/Pictures/Wallpapers/moon.jpg"
+spawn-at-startup "wbg" "-s" "/home/dusk/Pictures/Wallpapers/kit.svg"
 spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
 spawn-at-startup "pipewire"
@@ -26,11 +26,12 @@ screenshot-path "~/Pictures/Screenshots/ Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
   DISPLAY ":0"
+  GTK_THEME "Andromeda-gtk"
 }
 
 cursor {
   xcursor-theme "future"
-  xcursor-size 20
+  xcursor-size 16
 }
 
 overview {
@@ -61,13 +62,14 @@ input {
   touchpad {
     off
     tap
-    dwt
+    //dwt
     drag true
     drag-lock
     natural-scroll
     scroll-method "two-finger"
   }
-  focus-follows-mouse
+  focus-follows-mouse max-scroll-amount="10%"
+
   workspace-auto-back-and-forth
 }
 
@@ -88,15 +90,19 @@ binds {
   Mod+Shift+W hotkey-overlay-title="Spawn Second Browser"   { spawn "chromium"; }
 
   Mod+E hotkey-overlay-title="Run Terminal File Manager"    { spawn-sh "foot yazi"; }
-  Mod+Shift+E hotkey-overlay-title="Spawn File Manager"     { spawn "nautilus"; }
+  Mod+Shift+E hotkey-overlay-title="Spawn File Manager"     { spawn "thunar"; }
 
-  Mod+V hotkey-overlay-title="Spawn Volume Control"         { spawn-sh "foot alsamixer"; }
+  Mod+V hotkey-overlay-title="Spawn Volume Control"         { spawn-sh "foot alsamixer --card 1"; }
   Mod+Shift+V hotkey-overlay-title="Spawn Volume Control"   { spawn "pavucontrol"; }
 
   Mod+Quotedbl hotkey-overlay-title="View Overview"         { toggle-overview; }
   Mod+Q hotkey-overlay-title="Close App"                    { close-window; }
 
   Mod+I hotkey-overlay-title="Color Picker"                 { spawn-sh "hyprpicker -a -f hex -q"; }
+
+  Mod+Z hotkey-overlay-title="Word Translator"              { spawn-sh "foot tureng-console"; }
+
+  XF86Calculator hotkey-overlay-title="Run Calculator" { spawn "galculator"; }
 
   XF86AudioRaiseVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
   XF86AudioLowerVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
