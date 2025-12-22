@@ -12,6 +12,7 @@ alias config_fish="nvim $HOME/.config/fish/config.fish"
 alias ..="cd .."
 alias ...="cd .. && cd .."
 
+alias acpi="echo '$(cat /sys/class/power_supply/BAT0/capacity)  $(cat /sys/class/power_supply/BAT0/status)'"
 alias c="clear"
 alias lg="lazygit"
 alias m="mkdir -pv"
@@ -26,15 +27,16 @@ alias bunx="bun x"
 alias sudo="sudo -E"
 alias clear_history="echo '' > ~/.local/share/fish/fish_history"
 alias nano="nvim"
+alias lsblk="lsblk -p"
 
 alias gr="go run ."
 alias gb="go build -v ."
 
-alias pi="$s xbps-install"
-alias pu="$s xbps-install -Su"
-alias pr="$s xbps-remove"
-alias prc="$s xbps-remove -R"
-alias prd="$s xbps-remove -RFf"
+alias pi="$s pacman -S --needed"
+alias pu="$s pacman -Suy"
+alias pr="$s pacman -R"
+alias prc="$s pacman -Rsc"
+alias prd="$s pacman -Rdd"
 
 function ta
     if string match -q '*.zip' $argv

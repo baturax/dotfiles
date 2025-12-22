@@ -54,5 +54,5 @@ ANDROID_USER_HOME="/home/bai/.local/share/android/tmp"
 
 export MAKEFLAGS="-j8"
 export CFLAGS="-O3 -pipe -march=native"
-export CFLAGS="-O3 -pipe -march=native"
-RUSTFLAGS="-C target-cpu=native -C opt-level=3 -C codegen-units=1"
+export CXXLAGS="-O3 -pipe -march=native"
+export RUSTFLAGS="-C target-cpu=native -C opt-level=3 -C codegen-units=1"

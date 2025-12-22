@@ -1,7 +1,6 @@
-spawn-at-startup "wbg" "-s" "/home/dusk/Pictures/Wallpapers/kit.svg"
-spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
+spawn-at-startup "swaybg" "-i" "/home/bai/Pictures/Wallpapers/bg.jpg"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "fnott"
-spawn-at-startup "pipewire"
 
 layer-rule {
     match namespace="^launcher$"
@@ -26,11 +25,10 @@ screenshot-path "~/Pictures/Screenshots/ Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
   DISPLAY ":0"
-  GTK_THEME "Andromeda-gtk"
+  GTK_THEME "Reversal-Dark/"
 }
 
 cursor {
-  xcursor-theme "future"
   xcursor-size 16
 }
 
