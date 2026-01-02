@@ -1,0 +1,12 @@
+// floating
+window-rule {
+  match title="Open Folder"
+  match app-id="galculator"
+
+  open-floating true
+}
+
+window-rule {
+  geometry-corner-radius 10
+  clip-to-geometry true
+}

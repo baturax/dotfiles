@@ -1,0 +1,31 @@
+spawn-at-startup "fnott"
+spawn-at-startup "pipewire"
+spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/ Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+environment {
+  DISPLAY ":0"
+  GTK_THEME "Dracula-slim"
+  
+}
+
+cursor {
+  xcursor-theme  "lyrab"
+  xcursor-size 16
+  hide-after-inactive-ms 10000
+}
+
+overview {
+  zoom 0.6
+  backdrop-color "#0D1117"
+  workspace-shadow {
+    off
+  }
+}
+
+xwayland-satellite {
+  off
+}

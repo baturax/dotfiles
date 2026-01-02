@@ -1,0 +1,48 @@
+layout {
+  gaps 10
+  center-focused-column "on-overflow"
+  always-center-single-column
+  default-column-display "normal"
+
+  preset-column-widths {
+    proportion 0.33333
+    proportion 0.5
+    proportion 0.66667
+    proportion 0.8888
+  }
+
+  default-column-width {
+    proportion 0.5;
+  }
+
+  preset-window-heights {
+    proportion 0.33333
+    proportion 0.5
+    proportion 0.66667
+    fixed 1070
+  }
+
+  focus-ring {
+    width 1.5
+    active-color "hsl(83, 67%, 32%)"
+    // inactive-color "dasdsa
+    urgent-color "#000000"
+  }
+
+  shadow {
+    on
+  }
+
+  tab-indicator {
+    off
+  }
+
+  insert-hint {
+    color "#183767ff"
+  }
+
+  struts {
+  }
+
+  background-color "#0D1117"
+}

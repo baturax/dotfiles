@@ -1,0 +1,24 @@
+input {
+  keyboard {
+    xkb {
+      layout "tr"
+    }
+    repeat-delay 300
+    repeat-rate 20
+  }
+
+  touchpad {
+    off
+    tap
+    //dwt
+    drag true
+    drag-lock
+    natural-scroll
+    scroll-method "two-finger"
+  }
+  
+  focus-follows-mouse max-scroll-amount="80%"
+  workspace-auto-back-and-forth
+  mod-key "Super"
+  mod-key-nested "Alt"
+}

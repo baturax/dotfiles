@@ -1,0 +1,96 @@
+binds {
+  Mod+C hotkey-overlay-title="Spawn Terminal"   { spawn "foot"; }
+  Mod+D hotkey-overlay-title="Spawn Launcher"   { spawn "fuzzel"; }
+
+  Mod+W hotkey-overlay-title="Spawn Browser"                { spawn "firefox"; }
+  Mod+Shift+W hotkey-overlay-title="Spawn Second Browser"   { spawn "chromium"; }
+
+  Mod+E hotkey-overlay-title="Run Terminal File Manager"    { spawn-sh "foot yazi"; }
+  Mod+Shift+E hotkey-overlay-title="Spawn File Manager"     { spawn "thunar"; }
+
+  Mod+V hotkey-overlay-title="Spawn Volume Control"         { spawn-sh "foot alsamixer --card 1"; }
+  Mod+Shift+V hotkey-overlay-title="Spawn Volume Control"   { spawn "pavucontrol"; }
+
+  Mod+Quotedbl hotkey-overlay-title="View Overview"         { toggle-overview; }
+  Mod+Q hotkey-overlay-title="Close App"                    { close-window; }
+
+  Mod+I hotkey-overlay-title="Color Picker"                 { spawn-sh "hyprpicker -a -f hex -q"; }
+
+  Mod+Z hotkey-overlay-title="Word Translator"              { spawn-sh "foot tureng-console"; }
+
+  XF86Calculator hotkey-overlay-title="Run Calculator" { spawn "galculator"; }
+
+  XF86AudioRaiseVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+"; }
+  XF86AudioLowerVolume allow-when-locked=true       { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"; }
+  XF86AudioMute allow-when-locked=true              { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioMicMute allow-when-locked=true           { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  XF86MonBrightnessUp allow-when-locked=true        { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+  XF86MonBrightnessDown allow-when-locked=true      { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+  XF86AudioPlay allow-when-locked=true              { spawn "playerctl" "play-pause"; }
+  XF86AudioStop allow-when-locked=true              { spawn "playerctl" "pause"; }
+  XF86AudioPrev allow-when-locked=true              { spawn "playerctl" "previous"; }
+  XF86AudioNext allow-when-locked=true              { spawn "playerctl" "next"; }
+
+  Mod+H   { focus-column-left; }
+  Mod+J   { focus-window-down; }
+  Mod+K   { focus-window-up; }
+  Mod+L   { focus-column-right; }
+
+  Mod+Shift+H   { consume-or-expel-window-left; }
+  Mod+Shift+J   { move-window-down; }
+  Mod+Shift+K   { move-window-up; }
+  Mod+Shift+L   { consume-or-expel-window-right; }
+
+  Mod+WheelScrollUp   { focus-column-left; }
+  Mod+WheelScrollDown { focus-column-right; }
+
+  Mod+Shift+WheelScrollUp   { focus-workspace-up; }
+  Mod+Shift+WheelScrollDown { focus-workspace-down; }
+
+  Mod+Shift+Q { quit; }
+
+  Mod+Return  { do-screen-transition delay-ms=100; }
+
+  Print       { screenshot; }
+  Ctrl+Print  { screenshot show-pointer=false; }
+
+  Mod+Escape  { toggle-keyboard-shortcuts-inhibit; }
+
+  Mod+1 { focus-workspace 1; }
+  Mod+2 { focus-workspace 2; }
+  Mod+3 { focus-workspace 3; }
+  Mod+4 { focus-workspace 4; }
+  Mod+5 { focus-workspace 5; }
+  Mod+6 { focus-workspace 6; }
+  Mod+7 { focus-workspace 7; }
+  Mod+8 { focus-workspace 8; }
+  Mod+9 { focus-workspace 9; }
+
+  Mod+Shift+1 { move-column-to-workspace 1; }
+  Mod+Shift+2 { move-column-to-workspace 2; }
+  Mod+Shift+3 { move-column-to-workspace 3; }
+  Mod+Shift+4 { move-column-to-workspace 4; }
+  Mod+Shift+5 { move-column-to-workspace 5; }
+  Mod+Shift+6 { move-column-to-workspace 6; }
+  Mod+Shift+7 { move-column-to-workspace 7; }
+  Mod+Shift+8 { move-column-to-workspace 8; }
+  Mod+Shift+9 { move-column-to-workspace 9; }
+
+  Mod+R         { switch-preset-column-width; }
+  Mod+Shift+R   { switch-preset-window-height; }
+
+  Mod+F         { maximize-column; }
+  Mod+Shift+F   { fullscreen-window; }
+
+  Mod+A { center-column; }
+
+  Mod+KP_Subtract       { set-column-width "-10%"; }
+  Mod+KP_Add            { set-column-width "+10%"; }
+  Mod+Shift+KP_Subtract { set-window-height "-10%"; }
+  Mod+Shift+KP_Add      { set-window-height "+10%"; }
+
+  Mod+Space       { toggle-window-floating; }
+  Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
+
+  Mod+Shift+P { power-off-monitors; }
+}
