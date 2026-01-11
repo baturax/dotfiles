@@ -7,8 +7,5 @@ output "eDP-1" {
   backdrop-color "#0D1117"
   hot-corners {
     top-left
-    top-right
-    bottom-left
-    bottom-right
   }  
 }

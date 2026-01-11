@@ -8,8 +8,7 @@ screenshot-path "~/Pictures/Screenshots/ Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
   DISPLAY ":0"
-  GTK_THEME "Dracula-slim"
-  
+  GTK_THEME "Snow-alien"
 }
 
 cursor {
