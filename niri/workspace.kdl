@@ -1,4 +1,8 @@
 workspace "browser"
-workspace "code"
+workspace "code" {
+	layout {
+		center-focused-column "never"
+	}
+}
 workspace "music"
 workspace "game"
