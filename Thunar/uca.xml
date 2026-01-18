@@ -12,4 +12,16 @@
 	<startup-notify/>
 	<directories/>
 </action>
+<action>
+	<icon>vscode</icon>
+	<name>VSCode</name>
+	<submenu></submenu>
+	<unique-id>1768628771227546-1</unique-id>
+	<command>code .</command>
+	<description>open in vscode</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
 </actions>
