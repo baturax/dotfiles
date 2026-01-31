@@ -1,2 +1,0 @@
-timeout 300 swaylock
-timeout 309 "systemctl suspend"
