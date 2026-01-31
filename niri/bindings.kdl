@@ -14,7 +14,7 @@ binds {
   Mod+Quotedbl hotkey-overlay-title="View Overview"         { toggle-overview; }
   Mod+Q hotkey-overlay-title="Close App"                    { close-window; }
 
-  Mod+I hotkey-overlay-title="Color Picker"                 { spawn-sh "hyprpicker -a -f hex -q"; }
+  Mod+S hotkey-overlay-title="Color Picker"                 { spawn-sh "hyprpicker -a -f hex -q"; }
 
   Mod+Z hotkey-overlay-title="Word Translator"              { spawn-sh "foot tureng-console"; }
   Mod+X hotkey-overlay-title="Word Translator"              { spawn-sh "foot deepl-in-console"; }

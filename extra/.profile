@@ -1,6 +1,5 @@
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:$HOME/.fluttersdk/flutter/bin"
 
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
@@ -19,7 +18,7 @@ export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 export GOBIN="$XDG_BIN_HOME/"
 
-export BUN_INSTALL="$HOME/.bun"
+export BUN_INSTALL="$XDG_DATA_HOME/bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 #game
@@ -34,7 +33,7 @@ export PROTON_LOCAL_SHADER_CACHE=0
 export ENABLE_LAYER_MESA_ANTI_LAG=1
 export PROTON_NO_STEAMINPUT=1
 
-#export QT_FONT_DPI=96
+export QT_FONT_DPI=100
 export QT_QPA_PLATFORM="wayland"
 export ELECTRON_OZONE_PLATFORM_HINT="auto"
 export QT_QPA_PLATFORMTHEME="qt6ct"
@@ -48,10 +47,7 @@ export gh="$https/github.com"
 export MANPAGER="bat"
 export DIPLAY="nvim"
 
-ANDROID_SDK_ROOT="/home/bai/.local/share/android"
-ANDROID_USER_HOME="/home/bai/.local/share/android/tmp"
-
-# export GPG_TTY=$(tty)
+export GPG_TTY=$(tty)
 
 export MAKEFLAGS="-j8"
 export CFLAGS="-O3 -pipe -march=native"

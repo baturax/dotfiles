@@ -3,6 +3,7 @@ workspace "code" {
 	layout {
 		center-focused-column "never"
 	}
+
 }
 workspace "music"
 workspace "game"
