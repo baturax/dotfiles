@@ -42,8 +42,6 @@ export QT_QPA_PLATFORMTHEME="qt6ct"
 
 export ELECTRON_OZONE_PLATFORM_HINT="wayland"
 
-export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
-
 export HISTFILE=$XDG_CACHE_HOME/shellhistory
 export https="https:/"
 export gh="$https/github.com"
@@ -68,3 +66,4 @@ export JAVA_HOME="$XDG_DATA_HOME"/jvm/jdk-21
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
