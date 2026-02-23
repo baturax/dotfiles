@@ -62,3 +62,5 @@ end
 function fish_greeting
 	fastfetch -c examples/8.jsonc
 end
+
+alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"

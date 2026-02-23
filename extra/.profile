@@ -1,5 +1,6 @@
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/share/elan/bin/"
 
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
@@ -60,10 +61,17 @@ export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
 export ANDROID_HOME="$XDG_DATA_HOME"/android/sdk
 export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android/avd
 export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME/android"
-alias adb='HOME="$XDG_DATA_HOME"/android adb'
 
 export JAVA_HOME="$XDG_DATA_HOME"/jvm/jdk-21
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
+export PYTHON_HISTORY="$XDG_CACHE_HOME"/pyhistory
+
+export NPM_CONFIG_INIT_MODULE="$XDG_CONFIG_HOME"/npm/config/npm-init.js   
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME"/npm
+export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR"/npm
+source "$HOME/.cargo/env"
