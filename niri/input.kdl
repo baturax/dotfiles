@@ -8,7 +8,6 @@ input {
 	}
 
 	mouse {
-		middle-emulation
 		accel-speed 0.4
 	}
 
