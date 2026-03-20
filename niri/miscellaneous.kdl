@@ -1,6 +1,7 @@
 spawn-at-startup "fnott"
 spawn-at-startup "pipewire"
 spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
+spawn-at-startup "wbg" "-s" "Pictures/Wallpapers/ariana.jpeg"
 
 prefer-no-csd
 
@@ -8,13 +9,12 @@ screenshot-path "~/Pictures/Screenshots/ Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 environment {
   DISPLAY ":0"
-  GTK_THEME "Snow-alien"
-	SHELL "/bin/fish"
+  SHELL "/bin/fish"
 }
 
 cursor {
-  xcursor-theme  "macOS"
-  xcursor-size 24
+  xcursor-theme "Adwaita"
+  xcursor-size 20
   hide-after-inactive-ms 10000
 }
 

@@ -15,6 +15,7 @@ binds {
   Mod+Q hotkey-overlay-title="Close App"                    { close-window; }
 
   Mod+S hotkey-overlay-title="Color Picker"                 { spawn-sh "hyprpicker -a -f hex -q"; }
+	Mod+period hotkey-overlay-title="Emoji Picker"               { spawn-sh "bemoji -t"; }
 
   Mod+Z hotkey-overlay-title="Word Translator"              { spawn-sh "foot tureng-console"; }
   Mod+X hotkey-overlay-title="Word Translator"              { spawn-sh "foot deepl-in-console"; }
@@ -37,10 +38,20 @@ binds {
   Mod+K   { focus-window-up; }
   Mod+L   { focus-column-right; }
 
+  Mod+Left    { focus-column-left; }
+  Mod+Down    { focus-window-down; }
+  Mod+Up      { focus-window-up; }
+  Mod+Right   { focus-column-right; }
+
   Mod+Shift+H   { consume-or-expel-window-left; }
   Mod+Shift+J   { move-window-down; }
   Mod+Shift+K   { move-window-up; }
   Mod+Shift+L   { consume-or-expel-window-right; }
+
+  Mod+Shift+Left    { consume-or-expel-window-left; }
+  Mod+Shift+Down    { move-window-down; }
+  Mod+Shift+Up      { move-window-up; }
+  Mod+Shift+Right   { consume-or-expel-window-right; }
 
   Mod+WheelScrollUp   { focus-column-left; }
   Mod+WheelScrollDown { focus-column-right; }
