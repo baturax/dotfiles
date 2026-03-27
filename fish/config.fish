@@ -60,7 +60,10 @@ function ls
 end
 
 function fish_greeting
-	fastfetch -c examples/8.jsonc
+	fastfetch -c bai.jsonc
 end
 
 alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
+
+# strix
+fish_add_path /home/bai/.strix/bin

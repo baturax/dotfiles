@@ -1,4 +1,6 @@
 binds {
+
+
   Mod+C hotkey-overlay-title="Spawn Terminal"   { spawn "foot"; }
   Mod+D hotkey-overlay-title="Spawn Launcher"   { spawn "fuzzel"; }
 

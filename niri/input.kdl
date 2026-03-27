@@ -1,7 +1,7 @@
 input {
 	keyboard {
 		xkb {
-			layout "tr"
+			layout "us"
 		}
 		repeat-delay 300
 		repeat-rate 20
